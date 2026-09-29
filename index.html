@@ -240,17 +240,31 @@
 
   <!-- Mobile Drawer -->
   <div id="mobile-drawer" class="mobile-drawer">
-    <ul class="mobile-drawer-links">
-      <li><a href="#pillars" class="mobile-drawer-link">All Capabilities (Copy, Brand, Media, Dev)</a></li>
-      <li><a href="#vault" class="mobile-drawer-link">The Work & Case Studies</a></li>
-      <li><a href="#oracle" class="mobile-drawer-link">The Oracle Engine</a></li>
-      <li><a href="#comparison" class="mobile-drawer-link">The Quantile Standard</a></li>
-      <li><a href="#scoper" class="mobile-drawer-link">Project Scoper & Pricing</a></li>
-      <li><a href="#faq" class="mobile-drawer-link">Intelligence FAQ</a></li>
-    </ul>
-    <button class="btn btn-primary open-modal-trigger" style="margin-top: 1rem;">
-      <span>Deploy Quantile Squad</span>
-    </button>
+    <button id="mobile-drawer-close" class="mobile-drawer-close-btn" aria-label="Close Navigation">✕</button>
+    <div class="mobile-drawer-inner">
+      <div class="mobile-drawer-header">
+        <img src="assets/logo.svg" alt="Quantile" class="mobile-drawer-logo">
+        <span class="brand-name">QUANTILE<span>.</span></span>
+        <span class="mono-label" style="font-size:0.65rem; color:var(--gold-primary); margin-top:0.25rem;">SOVEREIGN GLOBAL AGENCY</span>
+      </div>
+      <ul class="mobile-drawer-links">
+        <li><a href="#pillars" class="mobile-drawer-link">Capabilities & Pillars</a></li>
+        <li><a href="#vault" class="mobile-drawer-link">Case Studies & Vault</a></li>
+        <li><a href="#oracle" class="mobile-drawer-link">The "Name It" Oracle</a></li>
+        <li><a href="#comparison" class="mobile-drawer-link">The Quantile Standard</a></li>
+        <li><a href="#scoper" class="mobile-drawer-link">Project Scoper & Pricing</a></li>
+        <li><a href="#faq" class="mobile-drawer-link">Intelligence FAQ</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <button class="btn btn-primary btn-lg open-modal-trigger" style="width: 100%;">
+          <span>Initiate Executive Brief</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+        <div class="mobile-drawer-city-strip">
+          SAN FRANCISCO // LONDON // ZURICH
+        </div>
+      </div>
+    </div>
   </div>
 
   <main class="page-content">
@@ -287,7 +301,7 @@
         </div>
 
         <!-- Capability Ticker Strip -->
-        <div style="margin-bottom: 3rem; font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.12em; color: var(--gold-light); opacity: 0.85;" class="reveal-fade-up">
+        <div class="capability-ticker-strip reveal-fade-up">
           COPYWRITING // 8K VIDEO STUDIO // PERFORMANCE MARKETING // LUXURY BRANDING // BESPOKE DEV // AI AGENTS
         </div>
 
@@ -850,6 +864,12 @@
           <span class="mono-label">THE QUANTILE DIFFERENTIATOR</span>
           <h2>The Legacy Agency Model Is Obsolete. <br><span class="gradient-text-gold">Experience Sovereign Precision.</span></h2>
           <p>Why modern industry leaders refuse to deal with fragmented junior agencies or unvetted freelancers.</p>
+        </div>
+
+        <div class="mobile-table-hint">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          <span>Swipe horizontally to compare full agency matrix</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </div>
 
         <div class="table-responsive reveal-fade-up">

@@ -292,16 +292,46 @@ function initSoundToggle() {
 function initMobileMenu() {
   const btn = document.getElementById('mobile-menu-toggle');
   const menu = document.getElementById('mobile-drawer');
+  const closeBtn = document.getElementById('mobile-drawer-close');
   if (!btn || !menu) return;
 
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('open');
+  function openMenu() {
+    menu.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    if (window.soundEngine) window.soundEngine.playConfirm();
+  }
+
+  function closeMenu() {
+    menu.classList.remove('open');
+    document.body.style.overflow = 'auto';
+  }
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (menu.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
 
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('open');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeMenu();
     });
+  }
+
+  menu.querySelectorAll('a, .open-modal-trigger').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('open')) {
+      closeMenu();
+    }
   });
 }
 
