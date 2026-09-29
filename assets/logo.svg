@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="qGoldGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="35%" stop-color="#F2D396" />
+      <stop offset="70%" stop-color="#C59341" />
+      <stop offset="100%" stop-color="#805615" />
+    </linearGradient>
+    <linearGradient id="qPlatGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#64748B" />
+      <stop offset="50%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#94A3B8" />
+    </linearGradient>
+    <filter id="qGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Outer precision geometric ring with segmented breaks for quantile distribution -->
+  <circle cx="50" cy="50" r="40" stroke="url(#qPlatGrad)" stroke-width="2.5" stroke-dasharray="180 15 50 15" stroke-linecap="round" opacity="0.4" />
+  
+  <!-- Main sculpted Q Ring -->
+  <circle cx="50" cy="50" r="32" stroke="url(#qGoldGrad)" stroke-width="5" stroke-linecap="round" filter="url(#qGlow)" stroke-dasharray="170 35" />
+  
+  <!-- Core Inner Geometric Iris -->
+  <circle cx="50" cy="50" r="18" stroke="#FFFFFF" stroke-width="1.2" stroke-opacity="0.3" stroke-dasharray="4 6" />
+  
+  <!-- Sovereign Division Tail / Slash (Quantile Vector) -->
+  <line x1="42" y1="42" x2="78" y2="78" stroke="url(#qGoldGrad)" stroke-width="5.5" stroke-linecap="round" filter="url(#qGlow)" />
+  <circle cx="78" cy="78" r="3" fill="#FFFFFF" />
+  
+  <!-- Precision Vertex Points -->
+  <circle cx="50" cy="18" r="2" fill="#F2D396" />
+  <circle cx="18" cy="50" r="2" fill="#F2D396" />
+</svg>

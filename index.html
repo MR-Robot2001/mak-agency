@@ -1,144 +1,1406 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantile | Capital Growth Through Absolute Alignment</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUANTILE — The Full-Spectrum Sovereign Enterprise Agency</title>
+  <meta name="description" content="Quantile is the elite sovereign agency that executes every dimension of enterprise growth: Deep Tech, Applied AI, Haute Couture Branding, Exponential Growth, and Capital Architecture. You name it, we engineer it.">
+  <meta name="keywords" content="Quantile, elite agency, full-service agency, AI automation, custom software, luxury branding, growth marketing, venture architecture">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="QUANTILE — The Full-Spectrum Enterprise Agency">
+  <meta property="og:description" content="You name it. We engineer it. Total execution and absolute market dominance for sovereign enterprises.">
+  <meta property="og:image" content="assets/logo.svg">
+  <meta name="theme-color" content="#060709">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cinzel:wght@600;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/animations.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">QUANTILE</div>
-            <div class="menu-toggle">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#levers">Value Levers</a></li>
-                <li><a href="#contact" class="btn-minimal">Initiate Inquiry</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <header class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <h1 class="reveal-text">Scaling the India Opportunity Through Absolute Alignment.</h1>
-                <p class="sub-headline">Quantile partners with India’s most ambitious promoters and enterprises. We operate on a pure performance-equity model, retaining a 5% to 15% interest in the incremental growth we unlock. Our conviction is indexed to the Bharat-scale opportunity.</p>
-                <div class="hero-visual">
-                    <svg viewBox="0 0 800 400" class="growth-vector">
-                        <path d="M0,350 Q200,340 400,200 T800,50" fill="none" stroke="#C5A059" stroke-width="2" class="vector-path"/>
-                        <circle cx="800" cy="50" r="4" fill="#C5A059" />
-                    </svg>
-                    <div class="data-label">BHARAT GROWTH QUANTILE_2026</div>
-                </div>
-            </div>
-            <div class="hero-image-container">
-                <img src="https://images.unsplash.com/photo-1566552881560-0be862a7c445?q=80&w=2000&auto=format&fit=crop" alt="The India Opportunity" class="hero-img">
-                <div class="image-overlay"></div>
-            </div>
-        </div>
-    </header>
+  <!-- Sensory Custom Cursor -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-follower"></div>
 
-    <section id="philosophy" class="philosophy">
-        <div class="container">
-            <div class="grid">
-                <div class="col-left">
-                    <h2 class="section-title">The Quantile Edge</h2>
-                    <div class="side-image-box">
-                        <img src="https://images.unsplash.com/photo-1590766940554-634a7ed41450?q=80&w=1000&auto=format&fit=crop" alt="Modern India Scale" class="side-img">
-                    </div>
-                </div>
-                <div class="col-right">
-                    <p class="lead">As India transitions to a global economic powerhouse, the traditional agency model is failing to keep pace with Promoter-led vision.</p>
-                    <p>Quantile represents the top tier of performance in the Indian landscape. We founded this firm on the principle of <strong>Promoter-Incentive Alignment</strong>. In a market where "skin in the game" is the ultimate trust signal, we transform from a vendor into a strategic stakeholder.</p>
-                    <p>We do not seek clients; we seek high-conviction partnerships with enterprises ready for the next level of institutionalization. If we do not deliver measurable expansion, we do not realize a return. This is the new standard for the India 2026 economy.</p>
-                </div>
-            </div>
+  <!-- Ambient Quantum Neural Canvas -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="ambient-lighting"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- ==========================================================================
+       PRELOADER SEQUENCE
+       ========================================================================== -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <img src="assets/logo.svg" alt="Quantile Monogram" class="preloader-logo">
+      <div class="preloader-text">QUANTILE // SYSTEM INITIALIZATION</div>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar"></div>
+      </div>
+      <div class="preloader-percent">0%</div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR — Sovereign Floating Luxury Capsule & Mega-Menu
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand-wrapper" aria-label="Quantile Home">
+        <img src="assets/logo.svg" alt="Quantile" class="brand-logo-img">
+        <div class="brand-title-group">
+          <span class="brand-name">QUANTILE<span>.</span></span>
+          <span class="brand-tagline">AGENCY · CREATIVE · TECH</span>
         </div>
+      </a>
+
+      <!-- Desktop Nav with Full-Spectrum Mega-Menu -->
+      <nav>
+        <ul class="nav-links">
+          
+          <!-- Capabilities & Mega Menu -->
+          <li class="nav-item-dropdown" id="mega-menu-item">
+            <span class="nav-link" id="mega-menu-trigger" role="button" aria-expanded="false" tabindex="0">
+              <span>What We Do</span>
+              <svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </span>
+
+            <div class="nav-mega-menu" id="nav-mega-menu">
+              <div class="mega-menu-grid">
+                
+                <!-- Column 1: Creative & Brand Architecture -->
+                <div>
+                  <div class="mega-col-title">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                    <span>Brand & Design</span>
+                  </div>
+                  <ul class="mega-links-list">
+                    <li>
+                      <a href="#pillars" class="mega-link-item">
+                        <span class="mega-link-name">Luxury Brand Identity</span>
+                        <span class="mega-link-desc">Couture visual systems, logos, & typography</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#pillars" class="mega-link-item">
+                        <span class="mega-link-name">3D Spatial & Motion</span>
+                        <span class="mega-link-desc">Cinema-grade 3D CGI & sensory interactions</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#pillars" class="mega-link-item">
+                        <span class="mega-link-name">High-End Packaging</span>
+                        <span class="mega-link-desc">Physical & tactile unboxing design</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Column 2: Copywriting & High-Ticket Narrative -->
+                <div>
+                  <div class="mega-col-title">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+                    <span>Copy & Story</span>
+                  </div>
+                  <ul class="mega-links-list">
+                    <li>
+                      <a href="#pillars" class="mega-link-item">
+                        <span class="mega-link-name">Brand Manifestos & Voice</span>
+                        <span class="mega-link-desc">The undeniable words that define market leaders</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#pillars" class="mega-link-item">
+                        <span class="mega-link-name">High-Converting VSLs</span>
+                        <span class="mega-link-desc">Sales letters, pitch decks & landing copy</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#pillars" class="mega-link-item">
+                        <span class="mega-link-name">Executive Ghostwriting</span>
+                        <span class="mega-link-desc">Thought leadership for iconic founders & CEOs</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Column 3: Omni-Channel Marketing & Media -->
+                <div>
+                  <div class="mega-col-title">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="2"></circle><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path></svg>
+                    <span>Marketing & Media</span>
+                  </div>
+                  <ul class="mega-links-list">
+                    <li>
+                      <a href="#pillars" class="mega-link-item">
+                        <span class="mega-link-name">Paid Media Blitz</span>
+                        <span class="mega-link-desc">Meta, TikTok, YouTube & high-yield Google ads</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#pillars" class="mega-link-item">
+                        <span class="mega-link-name">8K Cinema Video Studio</span>
+                        <span class="mega-link-desc">Commercial films, podcasts & viral reels</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#pillars" class="mega-link-item">
+                        <span class="mega-link-name">Viral PR & Influencer Blitz</span>
+                        <span class="mega-link-desc">Tier-1 media takeover & cultural saturation</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Column 4: Software, AI & Scaling Operations -->
+                <div>
+                  <div class="mega-col-title">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    <span>Tech & Automation</span>
+                  </div>
+                  <ul class="mega-links-list">
+                    <li>
+                      <a href="#pillars" class="mega-link-item">
+                        <span class="mega-link-name">Bespoke Software & Apps</span>
+                        <span class="mega-link-desc">Web apps, iOS/Android & enterprise platforms</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#pillars" class="mega-link-item">
+                        <span class="mega-link-name">Autonomous AI Swarms</span>
+                        <span class="mega-link-desc">Custom LLM agents & workflow robotics</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#pillars" class="mega-link-item">
+                        <span class="mega-link-name">Fractional C-Suite & Ops</span>
+                        <span class="mega-link-desc">CTO, CMO, CFO leadership & venture scale</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <!-- Mega Menu Bottom Guarantee -->
+              <div class="mega-menu-footer">
+                <span class="mega-menu-footer-motto">"Name any business demand. We create the copy, film the media, build the code, and drive the revenue."</span>
+                <a href="#oracle" class="mega-footer-link">
+                  <span>Open Interactive Oracle</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="#vault" class="nav-link">The Work</a></li>
+          <li><a href="#oracle" class="nav-link">The Oracle</a></li>
+          <li><a href="#comparison" class="nav-link">The Standard</a></li>
+          <li><a href="#scoper" class="nav-link">Project Scoper</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Prestige Availability Badge -->
+        <div class="system-status-badge">
+          <span class="status-dot"></span>
+          <span>NYC · LDN · ZURICH</span>
+        </div>
+
+        <!-- Audio Haptic Toggle -->
+        <button id="sound-toggle" class="sound-toggle-btn" aria-label="Toggle Sound Effects">
+          <!-- Populated dynamically via JS -->
+        </button>
+
+        <!-- CTA Button -->
+        <button class="btn btn-primary btn-sm open-modal-trigger">
+          <span>Initiate Brief</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Mobile Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <ul class="mobile-drawer-links">
+      <li><a href="#pillars" class="mobile-drawer-link">All Capabilities (Copy, Brand, Media, Dev)</a></li>
+      <li><a href="#vault" class="mobile-drawer-link">The Work & Case Studies</a></li>
+      <li><a href="#oracle" class="mobile-drawer-link">The Oracle Engine</a></li>
+      <li><a href="#comparison" class="mobile-drawer-link">The Quantile Standard</a></li>
+      <li><a href="#scoper" class="mobile-drawer-link">Project Scoper & Pricing</a></li>
+      <li><a href="#faq" class="mobile-drawer-link">Intelligence FAQ</a></li>
+    </ul>
+    <button class="btn btn-primary open-modal-trigger" style="margin-top: 1rem;">
+      <span>Deploy Quantile Squad</span>
+    </button>
+  </div>
+
+  <main class="page-content">
+
+    <!-- ==========================================================================
+         HERO SECTION — Full-Spectrum Agency Statement
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="container hero-content">
+        <div class="hero-badge-wrap reveal-fade-up">
+          <div class="hero-badge">
+            <span class="mono-label">FULL-SPECTRUM ENTERPRISE AGENCY · CREATIVE · COPY · MARKETING · CODE</span>
+          </div>
+        </div>
+
+        <h1 class="hero-title reveal-fade-up">
+          You Name It. <br>
+          <span class="gradient-text-gold title-accent">We Write, Film, Build & Scale It.</span>
+        </h1>
+
+        <p class="hero-subtitle reveal-fade-up">
+          From hypnotic sales copy that commands millions and 8K commercial cinema, to viral multi-channel marketing, luxury brand identities, custom software platforms, and autonomous AI systems. Quantile replaces eight separate agencies with one sovereign execution powerhouse.
+        </p>
+
+        <div class="hero-cta-group reveal-fade-up">
+          <button class="btn btn-primary btn-lg open-modal-trigger">
+            <span>Start a Project Brief</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+          <a href="#oracle" class="btn btn-secondary btn-lg">
+            <span>Test The "Name It" Oracle</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          </a>
+        </div>
+
+        <!-- Capability Ticker Strip -->
+        <div style="margin-bottom: 3rem; font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.12em; color: var(--gold-light); opacity: 0.85;" class="reveal-fade-up">
+          COPYWRITING // 8K VIDEO STUDIO // PERFORMANCE MARKETING // LUXURY BRANDING // BESPOKE DEV // AI AGENTS
+        </div>
+
+        <!-- Hero Metrics Grid -->
+        <div class="hero-metrics-bar stagger-parent">
+          <div class="metric-item">
+            <div class="metric-number">$480M<span>+</span></div>
+            <div class="metric-label">Client Revenue & Value Created</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">48<span>h</span></div>
+            <div class="metric-label">Rapid Squad Deployment</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">99.4<span>%</span></div>
+            <div class="metric-label">Execution Precision</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">100<span>%</span></div>
+            <div class="metric-label">Sovereign Client IP Handover</div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="levers" class="levers">
-        <div class="container">
-            <h2 class="section-title centered">Strategic Value Levers</h2>
-            <div class="lever-grid">
-                <div class="lever-card">
-                    <div class="lever-icon">
-                        <svg viewBox="0 0 64 64" width="40" height="40" fill="none" stroke="currentColor">
-                            <path d="M32 4L4 18v28l28 14 28-14V18L32 4z" stroke-width="2"/>
-                            <path d="M32 4v56M4 18l28 14 28-14" stroke-width="1.5" opacity="0.5"/>
-                        </svg>
-                    </div>
-                    <span class="lever-number">I</span>
-                    <h3>Institutional Brand Arbitrage</h3>
-                    <p>Elevating Indian enterprises to global standards of perception, ensuring your brand commands the premium it deserves in a competitive global landscape.</p>
-                </div>
-                <div class="lever-card">
-                    <div class="lever-icon">
-                        <svg viewBox="0 0 64 64" width="40" height="40" fill="none" stroke="currentColor">
-                            <circle cx="32" cy="32" r="28" stroke-width="2"/>
-                            <path d="M32 4v56M4 32h56" stroke-width="1" opacity="0.3"/>
-                            <circle cx="32" cy="32" r="12" stroke-width="2" stroke-dasharray="4 4"/>
-                        </svg>
-                    </div>
-                    <span class="lever-number">II</span>
-                    <h3>Bharat-Scale Pipeline Engineering</h3>
-                    <p>Architecting data-driven acquisition engines that capture high-intent demand across India’s diverse digital and physical demographics.</p>
-                </div>
-                <div class="lever-card">
-                    <div class="lever-icon">
-                        <svg viewBox="0 0 64 64" width="40" height="40" fill="none" stroke="currentColor">
-                            <rect x="8" y="8" width="48" height="48" rx="2" stroke-width="2"/>
-                            <path d="M8 24h48M8 40h48M24 8v48M40 8v48" stroke-width="1" opacity="0.3"/>
-                        </svg>
-                    </div>
-                    <span class="lever-number">III</span>
-                    <h3>Ecosystem Hardening</h3>
-                    <p>Preparing Indian firms for exponential growth by institutionalizing workflows and building resilient, technology-first operations.</p>
-                </div>
-            </div>
+    <!-- ==========================================================================
+         ENTERPRISE CREDIBILITY MARQUEE
+         ========================================================================== -->
+    <div class="marquee-section">
+      <div class="marquee-label">TRUSTED BY VISIONARY FOUNDERS, UNICORNS & PRIVATE EQUITY PORTFOLIOS</div>
+      <div class="marquee-track">
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 2 22 22 22"/></svg>
+          <span>AETHER DYNAMICS</span>
         </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+          <span>VALO CAPITAL</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          <span>HYPERION BIOSYSTEMS</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <span>NEXUS PRIME HOLDINGS</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>KINESIS HEALTH</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <span>STRATOS GLOBAL</span>
+        </div>
+        <!-- Duplicated for infinite loop -->
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 2 22 22 22"/></svg>
+          <span>AETHER DYNAMICS</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+          <span>VALO CAPITAL</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          <span>HYPERION BIOSYSTEMS</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          <span>NEXUS PRIME HOLDINGS</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         INTERACTIVE "NAME IT" ORACLE ENGINE
+         ========================================================================== -->
+    <section id="oracle" class="oracle-section">
+      <div class="container">
+        <div class="section-head reveal-fade-up">
+          <span class="mono-label">NATURAL LANGUAGE EXECUTION TERMINAL</span>
+          <h2>Name Any Business Challenge. <br><span class="gradient-text-gold">Watch Quantile Architect It.</span></h2>
+          <p>Type any technical, strategic, or creative demand. Our architectural matrix dynamically constructs the dedicated squad, sprint roadmap, and quantifiable deliverables in real time.</p>
+        </div>
+
+        <div class="oracle-terminal-card reveal-fade-up">
+          <div class="radar-scanner"></div>
+
+          <!-- Terminal Top -->
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <div class="terminal-status">QUANTILE_ORACLE_V4 // QUANTUM_PARSER: ACTIVE</div>
+          </div>
+
+          <!-- Command Input -->
+          <div class="oracle-search-box">
+            <span class="oracle-input-icon">❯</span>
+            <input 
+              type="text" 
+              id="oracle-input" 
+              class="oracle-input" 
+              placeholder="e.g. Build an autonomous multi-agent AI system to replace customer operations..."
+              value="Automate our enterprise operations with custom autonomous AI agents"
+              autocomplete="off"
+            >
+            <button id="oracle-submit-btn" class="oracle-submit-btn" aria-label="Execute Oracle Search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+
+          <!-- Interactive Chips -->
+          <div class="oracle-chips-label">FREQUENT HIGH-OCTANE DEMANDS:</div>
+          <div class="oracle-chips-group">
+            <button class="oracle-chip" data-oracle="copy">Hypnotic Copywriting & VSL</button>
+            <button class="oracle-chip" data-oracle="content">8K Cinema Ads & Media</button>
+            <button class="oracle-chip active" data-oracle="ai">AI Agent Swarm</button>
+            <button class="oracle-chip" data-oracle="brand">10x Luxury Rebrand</button>
+            <button class="oracle-chip" data-oracle="viral">Viral Marketing Launch</button>
+            <button class="oracle-chip" data-oracle="fintech">High-Frequency Fintech</button>
+            <button class="oracle-chip" data-oracle="fractional">Fractional C-Suite & Capital</button>
+            <button class="oracle-chip" data-oracle="mobile">30-Day Native Mobile App</button>
+          </div>
+
+          <!-- Real-Time Architectural Blueprint -->
+          <div id="oracle-blueprint" class="oracle-blueprint-display">
+            <div class="blueprint-meta-bar">
+              <div class="blueprint-title-wrap">
+                <span id="blueprint-code" class="blueprint-code">ORCL-AI-902</span>
+                <h3 id="blueprint-title" class="blueprint-title">Autonomous Enterprise Intelligence Matrix</h3>
+              </div>
+              <span id="blueprint-tag" class="blueprint-tag">Applied AI & Neural Architecture</span>
+            </div>
+
+            <div class="blueprint-grid">
+              <div class="blueprint-col">
+                <div class="blueprint-col-header">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <span>Dedicated Squad</span>
+                </div>
+                <p id="blueprint-squad" class="blueprint-col-value">Lead AI Researcher (ex-DeepMind), LLM Ops Engineer, Enterprise Data SRE</p>
+              </div>
+
+              <div class="blueprint-col">
+                <div class="blueprint-col-header">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span>Sprint Velocity</span>
+                </div>
+                <p id="blueprint-timeline" class="blueprint-col-value">3 Sprints (6 Weeks to Full Deployment)</p>
+              </div>
+
+              <div class="blueprint-col">
+                <div class="blueprint-col-header">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <span>Projected Impact</span>
+                </div>
+                <p id="blueprint-impact" class="blueprint-col-value">82% reduction in manual triage, 4.8x velocity increase, zero external data leakage</p>
+              </div>
+            </div>
+
+            <div class="blueprint-col" style="margin-bottom: 1.5rem;">
+              <div class="blueprint-col-header">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                <span>Tangible Deliverables</span>
+              </div>
+              <p id="blueprint-deliverables" class="blueprint-col-value">Bespoke multi-agent swarm, private localized RAG pipeline, real-time decision dashboard, automated CRM/ERP syncing.</p>
+            </div>
+
+            <div class="blueprint-actions">
+              <div class="blueprint-guarantee">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>QUANTILE SOVEREIGN IP HANDOVER INCLUDED</span>
+              </div>
+              <button id="oracle-scope-btn" class="btn btn-primary btn-sm">
+                <span>Deploy This Architecture</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-box">
-                <h2>Begin Alignment</h2>
-                <p>We select a limited number of Promoter-led partnerships annually. Provide your enterprise details to begin the strategic evaluation process.</p>
-                <form id="inquiry-form">
-                    <div class="form-group">
-                        <input type="text" name="promoter_name" placeholder="Promoter / Principal Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Institutional Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" name="phone" placeholder="Promoter Phone (+91 ...)" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="revenue" placeholder="Current Annual Revenue (INR)" required>
-                    </div>
-                    <button type="submit" class="btn-primary">Request Strategic Audit</button>
-                </form>
-            </div>
+    <!-- ==========================================================================
+         THE 8 SOVEREIGN PILLARS (CAPABILITIES)
+         ========================================================================== -->
+    <section id="pillars" class="pillars-section">
+      <div class="container">
+        <div class="section-head reveal-fade-up">
+          <span class="mono-label">THE QUANTILE MATRIX</span>
+          <h2>The 8 Sovereign Pillars. <br><span class="gradient-text-gold">Zero Fragmentation. Total Authority.</span></h2>
+          <p>Traditional companies hire eight different agencies and consultants. Quantile unites the entire spectrum into one elite, cohesive force.</p>
         </div>
+
+        <div class="pillars-grid stagger-parent">
+          
+          <!-- Pillar 1: High-Ticket Copywriting & Strategic Narrative -->
+          <div class="pillar-card">
+            <div class="pillar-top">
+              <div class="pillar-index">PILLAR 01 // NARRATIVE</div>
+              <div class="pillar-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+              </div>
+              <h3 class="pillar-title">Masterclass Copywriting & Narrative</h3>
+              <p class="pillar-desc">Hypnotic direct-response sales letters, multi-million dollar VSL scripts, unforgettable brand manifestos, high-converting email ecosystems, and executive ghostwriting.</p>
+            </div>
+            <div>
+              <div class="pillar-tags">
+                <span class="pillar-tag">Sales Letters</span>
+                <span class="pillar-tag">VSL Scripts</span>
+                <span class="pillar-tag">Brand Manifesto</span>
+                <span class="pillar-tag">Email Sequences</span>
+              </div>
+              <a href="#scoper" class="pillar-cta-link">Scope Copywriting →</a>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Haute Couture Brand & Packaging -->
+          <div class="pillar-card">
+            <div class="pillar-top">
+              <div class="pillar-index">PILLAR 02 // AESTHETICS</div>
+              <div class="pillar-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              </div>
+              <h3 class="pillar-title">Haute Couture Brand & UI/UX</h3>
+              <p class="pillar-desc">Iconic visual identity design, bespoke 3D spatial motion, Apple-caliber digital interfaces, luxury physical packaging, and sensory guidelines that command 10x pricing power.</p>
+            </div>
+            <div>
+              <div class="pillar-tags">
+                <span class="pillar-tag">Brand Identity</span>
+                <span class="pillar-tag">3D Motion</span>
+                <span class="pillar-tag">UI/UX Systems</span>
+                <span class="pillar-tag">Luxury Packaging</span>
+              </div>
+              <a href="#scoper" class="pillar-cta-link">Scope Design →</a>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Omni-Channel Marketing & Media Takeover -->
+          <div class="pillar-card">
+            <div class="pillar-top">
+              <div class="pillar-index">PILLAR 03 // ACQUISITION</div>
+              <div class="pillar-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"></path><polyline points="17 6 23 6 23 12"></polyline></svg>
+              </div>
+              <h3 class="pillar-title">Omni-Channel Marketing & Growth</h3>
+              <p class="pillar-desc">Algorithmic customer acquisition on Meta, TikTok, YouTube & Google, programmatic SEO domination, viral PR takeovers, high-yield CRO, and multi-tier influencer syndication.</p>
+            </div>
+            <div>
+              <div class="pillar-tags">
+                <span class="pillar-tag">Paid Media Blitz</span>
+                <span class="pillar-tag">Programmatic SEO</span>
+                <span class="pillar-tag">Viral PR Takeover</span>
+                <span class="pillar-tag">High-Yield CRO</span>
+              </div>
+              <a href="#scoper" class="pillar-cta-link">Scope Marketing →</a>
+            </div>
+          </div>
+
+          <!-- Pillar 4: Cinema Studio & Video Production -->
+          <div class="pillar-card">
+            <div class="pillar-top">
+              <div class="pillar-index">PILLAR 04 // CINEMA</div>
+              <div class="pillar-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
+              </div>
+              <h3 class="pillar-title">Cinema Studio & Video Production</h3>
+              <p class="pillar-desc">Studio-grade 8K commercial films, viral short-form creative factories for TikTok & Reels, executive podcast production, CGI visual effects, and documentary brand storytelling.</p>
+            </div>
+            <div>
+              <div class="pillar-tags">
+                <span class="pillar-tag">8K Commercials</span>
+                <span class="pillar-tag">Short-Form Blitz</span>
+                <span class="pillar-tag">Studio Podcasts</span>
+                <span class="pillar-tag">VFX & 3D Cinema</span>
+              </div>
+              <a href="#scoper" class="pillar-cta-link">Scope Media Studio →</a>
+            </div>
+          </div>
+
+          <!-- Pillar 5: Deep Tech & Sovereign Software -->
+          <div class="pillar-card">
+            <div class="pillar-top">
+              <div class="pillar-index">PILLAR 05 // ENGINEERING</div>
+              <div class="pillar-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              </div>
+              <h3 class="pillar-title">Deep Tech & Sovereign Software</h3>
+              <p class="pillar-desc">Mission-critical distributed architectures, ultra-low latency web applications, native Swift/Kotlin mobile apps, and quantum-resistant systems built for infinite scale.</p>
+            </div>
+            <div>
+              <div class="pillar-tags">
+                <span class="pillar-tag">Full-Stack Web</span>
+                <span class="pillar-tag">iOS / Android</span>
+                <span class="pillar-tag">Rust / Python</span>
+                <span class="pillar-tag">Cloud Scale</span>
+              </div>
+              <a href="#scoper" class="pillar-cta-link">Scope Software →</a>
+            </div>
+          </div>
+
+          <!-- Pillar 6: Applied AI & Neural Swarms -->
+          <div class="pillar-card">
+            <div class="pillar-top">
+              <div class="pillar-index">PILLAR 06 // INTELLIGENCE</div>
+              <div class="pillar-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+              </div>
+              <h3 class="pillar-title">Applied AI & Autonomous Swarms</h3>
+              <p class="pillar-desc">Custom LLM fine-tuning, private enterprise RAG deployments, autonomous agent swarms, and synthetic data engines that replace weeks of manual human triage with seconds of computation.</p>
+            </div>
+            <div>
+              <div class="pillar-tags">
+                <span class="pillar-tag">Autonomous Agents</span>
+                <span class="pillar-tag">Custom Weights</span>
+                <span class="pillar-tag">Private RAG</span>
+                <span class="pillar-tag">Workflow Robotics</span>
+              </div>
+              <a href="#scoper" class="pillar-cta-link">Scope Intelligence →</a>
+            </div>
+          </div>
+
+          <!-- Pillar 7: Capital Strategy & Syndicate -->
+          <div class="pillar-card">
+            <div class="pillar-top">
+              <div class="pillar-index">PILLAR 07 // CAPITAL</div>
+              <div class="pillar-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <h3 class="pillar-title">Capital Strategy & Syndicate</h3>
+              <p class="pillar-desc">Institutional venture structuring, tier-1 Silicon Valley pitch narrative engineering, financial modeling, fractional CFO leadership, and private equity readiness.</p>
+            </div>
+            <div>
+              <div class="pillar-tags">
+                <span class="pillar-tag">Pitch Narrative</span>
+                <span class="pillar-tag">Fractional CFO</span>
+                <span class="pillar-tag">M&A Structuring</span>
+                <span class="pillar-tag">Dataroom Build</span>
+              </div>
+              <a href="#scoper" class="pillar-cta-link">Scope Strategy →</a>
+            </div>
+          </div>
+
+          <!-- Pillar 8: Enterprise Ops & Classified Turnaround -->
+          <div class="pillar-card">
+            <div class="pillar-top">
+              <div class="pillar-index">PILLAR 08 // OPERATIONS</div>
+              <div class="pillar-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </div>
+              <h3 class="pillar-title">Enterprise Ops & Turnaround</h3>
+              <p class="pillar-desc">End-to-end ERP implementation, automated supplier pipelines, zero-touch CRM synthesis, crisis reputation containment, stealth launches, and rapid turnaround war rooms.</p>
+            </div>
+            <div>
+              <div class="pillar-tags">
+                <span class="pillar-tag">Custom ERP</span>
+                <span class="pillar-tag">Zero-Touch Ops</span>
+                <span class="pillar-tag">Crisis Containment</span>
+                <span class="pillar-tag">Strict NDA</span>
+              </div>
+              <a href="#scoper" class="pillar-cta-link">Scope Operations →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <span class="logo-small">QUANTILE</span>
-                <span class="copyright">© 2026 QUANTILE STRATEGIC PARTNERS. ALL RIGHTS RESERVED.</span>
-            </div>
+    <!-- ==========================================================================
+         THE VAULT: CASE STUDIES & PROOF OF EXECUTION
+         ========================================================================== -->
+    <section id="vault" class="vault-section">
+      <div class="container">
+        <div class="section-head reveal-fade-up">
+          <span class="mono-label">THE QUANTILE VAULT</span>
+          <h2>Declassified Results. <br><span class="gradient-text-gold">Measurable Enterprise Hegemony.</span></h2>
+          <p>We measure our engagements by institutional enterprise value, market dominance, and speed of execution.</p>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <!-- Filter Bar -->
+        <div class="vault-filter-bar reveal-fade-up">
+          <button class="filter-btn vault-filter-btn active" data-filter="all">All Engagements</button>
+          <button class="filter-btn vault-filter-btn" data-filter="copy">Copy & Narrative</button>
+          <button class="filter-btn vault-filter-btn" data-filter="brand">Brand & Cinema</button>
+          <button class="filter-btn vault-filter-btn" data-filter="growth">Marketing & Scale</button>
+          <button class="filter-btn vault-filter-btn" data-filter="tech">Software & AI</button>
+        </div>
+
+        <div class="vault-grid">
+          
+          <!-- Case 1: Copywriting & Haute Brand Launch -->
+          <div class="vault-card reveal-fade-up" data-category="copy brand">
+            <div>
+              <div class="vault-card-header">
+                <h3 class="vault-client-name">Aurelia Haute Parfumerie</h3>
+                <span class="vault-industry-tag">Couture Fragrance & Narrative</span>
+              </div>
+              <p class="vault-challenge-desc">Penned the brand's global manifesto, hypnotic direct-response sales letter, and produced an 8K cinema launch commercial in Paris. Generated $12.8M in first-year direct-to-consumer revenue with zero traditional retail presence.</p>
+            </div>
+            <div>
+              <div class="vault-metrics-row">
+                <div class="vault-metric-box">
+                  <div class="vault-stat">$12.8M</div>
+                  <div class="vault-stat-label">Direct Revenue</div>
+                </div>
+                <div class="vault-metric-box">
+                  <div class="vault-stat">42%</div>
+                  <div class="vault-stat-label">Repeat Order Rate</div>
+                </div>
+                <div class="vault-metric-box">
+                  <div class="vault-stat">5.8x</div>
+                  <div class="vault-stat-label">Blended ROAS</div>
+                </div>
+              </div>
+              <div class="vault-footer">
+                <span class="vault-squad-tag">Squad: Master Copywriter, Film Director, Creative Director</span>
+                <button class="btn btn-secondary btn-sm open-modal-trigger">Review Brief</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 2: Executive Ghostwriting & Thought Leadership -->
+          <div class="vault-card reveal-fade-up" data-category="copy growth">
+            <div>
+              <div class="vault-card-header">
+                <h3 class="vault-client-name">Veritas Strategic Network</h3>
+                <span class="vault-industry-tag">Editorial & Executive Influence</span>
+              </div>
+              <p class="vault-challenge-desc">Engineered an authoritative ghostwriting syndicate and weekly executive editorial publication for a $2B private equity fund. Scaled readership from 0 to 4.2M monthly reads, driving 18 proprietary deal flow introductions.</p>
+            </div>
+            <div>
+              <div class="vault-metrics-row">
+                <div class="vault-metric-box">
+                  <div class="vault-stat">4.2M</div>
+                  <div class="vault-stat-label">Monthly Readers</div>
+                </div>
+                <div class="vault-metric-box">
+                  <div class="vault-stat">58%</div>
+                  <div class="vault-stat-label">Verified Open Rate</div>
+                </div>
+                <div class="vault-metric-box">
+                  <div class="vault-stat">#1</div>
+                  <div class="vault-stat-label">Ranked PE Publication</div>
+                </div>
+              </div>
+              <div class="vault-footer">
+                <span class="vault-squad-tag">Squad: Lead Ghostwriter, Editorial Director, Viral Strategist</span>
+                <button class="btn btn-secondary btn-sm open-modal-trigger">Review Brief</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 3: Valo Luxury Group -->
+          <div class="vault-card reveal-fade-up" data-category="brand">
+            <div>
+              <div class="vault-card-header">
+                <h3 class="vault-client-name">Valo Luxury Group</h3>
+                <span class="vault-industry-tag">Haute Horlogerie & Heritage</span>
+              </div>
+              <p class="vault-challenge-desc">Complete digital overhaul, 3D WebGL timepiece customizer, sensory e-commerce flagship, and global positioning film commanding a 340% increase in average ticket size.</p>
+            </div>
+            <div>
+              <div class="vault-metrics-row">
+                <div class="vault-metric-box">
+                  <div class="vault-stat">+340%</div>
+                  <div class="vault-stat-label">AOV Elevation</div>
+                </div>
+                <div class="vault-metric-box">
+                  <div class="vault-stat">4.2x</div>
+                  <div class="vault-stat-label">Checkout Conversion</div>
+                </div>
+                <div class="vault-metric-box">
+                  <div class="vault-stat">#1</div>
+                  <div class="vault-stat-label">Awwwards SOTD</div>
+                </div>
+              </div>
+              <div class="vault-footer">
+                <span class="vault-squad-tag">Squad: Creative Director, 3D Artist, UI Lead</span>
+                <button class="btn btn-secondary btn-sm open-modal-trigger">Review Brief</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 4: Aether Dynamics -->
+          <div class="vault-card reveal-fade-up" data-category="tech">
+            <div>
+              <div class="vault-card-header">
+                <h3 class="vault-client-name">Aether Dynamics</h3>
+                <span class="vault-industry-tag">Autonomous Systems</span>
+              </div>
+              <p class="vault-challenge-desc">Engineered and shipped a multi-agent autonomous logistics dispatch suite in 6 weeks, replacing legacy software and qualifying the firm for a $34M Series A led by Tier-1 VCs.</p>
+            </div>
+            <div>
+              <div class="vault-metrics-row">
+                <div class="vault-metric-box">
+                  <div class="vault-stat">$34M</div>
+                  <div class="vault-stat-label">Series A Secured</div>
+                </div>
+                <div class="vault-metric-box">
+                  <div class="vault-stat">6 Wks</div>
+                  <div class="vault-stat-label">Concept to Production</div>
+                </div>
+                <div class="vault-metric-box">
+                  <div class="vault-stat">99.98%</div>
+                  <div class="vault-stat-label">System Uptime</div>
+                </div>
+              </div>
+              <div class="vault-footer">
+                <span class="vault-squad-tag">Squad: 4 Engineers, 1 AI Lead, 1 Architect</span>
+                <button class="btn btn-secondary btn-sm open-modal-trigger">Review Brief</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 5: Kinesis Health -->
+          <div class="vault-card reveal-fade-up" data-category="growth tech">
+            <div>
+              <div class="vault-card-header">
+                <h3 class="vault-client-name">Kinesis Health</h3>
+                <span class="vault-industry-tag">Consumer Longevity & Scale</span>
+              </div>
+              <p class="vault-challenge-desc">Executed an end-to-end full-stack scale blitz: hypnotic subscription copy, native iOS biomarker app, celebrity documentary campaign, scaling from $0 to $18M ARR in 11 months.</p>
+            </div>
+            <div>
+              <div class="vault-metrics-row">
+                <div class="vault-metric-box">
+                  <div class="vault-stat">$18M</div>
+                  <div class="vault-stat-label">ARR Reached</div>
+                </div>
+                <div class="vault-metric-box">
+                  <div class="vault-stat">1.8M</div>
+                  <div class="vault-stat-label">App Downloads</div>
+                </div>
+                <div class="vault-metric-box">
+                  <div class="vault-stat">11 Mo</div>
+                  <div class="vault-stat-label">Zero to Scale Time</div>
+                </div>
+              </div>
+              <div class="vault-footer">
+                <span class="vault-squad-tag">Squad: Full Quantile Sovereign Growth Armada</span>
+                <button class="btn btn-secondary btn-sm open-modal-trigger">Review Brief</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         THE QUANTILE STANDARD (COMPARISON MATRIX)
+         ========================================================================== -->
+    <section id="comparison" class="comparison-section">
+      <div class="container">
+        <div class="section-head reveal-fade-up">
+          <span class="mono-label">THE QUANTILE DIFFERENTIATOR</span>
+          <h2>The Legacy Agency Model Is Obsolete. <br><span class="gradient-text-gold">Experience Sovereign Precision.</span></h2>
+          <p>Why modern industry leaders refuse to deal with fragmented junior agencies or unvetted freelancers.</p>
+        </div>
+
+        <div class="table-responsive reveal-fade-up">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Execution Dimension</th>
+                <th>Traditional Legacy Agencies</th>
+                <th>Freelance Chaos</th>
+                <th class="col-quantile">QUANTILE SQUAD</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Deployment Velocity</strong></td>
+                <td>4–8 weeks of bureaucratic onboarding</td>
+                <td>Unpredictable, frequent ghosting</td>
+                <td class="col-quantile">Squad deployed in 48 Hours</td>
+              </tr>
+              <tr>
+                <td><strong>Talent Tier & Seniority</strong></td>
+                <td>Senior pitches, junior interns execute</td>
+                <td>Variable quality, no vetting</td>
+                <td class="col-quantile">Top 1% vetted battle-tested veterans</td>
+              </tr>
+              <tr>
+                <td><strong>Capability Breadth</strong></td>
+                <td>Siloed (only design or only ads)</td>
+                <td>Single narrow skill</td>
+                <td class="col-quantile">Full-Spectrum (Code, AI, Brand, Capital, Ops)</td>
+              </tr>
+              <tr>
+                <td><strong>IP & Asset Sovereignty</strong></td>
+                <td>Hidden proprietary lock-ins</td>
+                <td>Disorganized repositories</td>
+                <td class="col-quantile">100% Client Ownership, zero retainers required</td>
+              </tr>
+              <tr>
+                <td><strong>Agile Sprints & Transparency</strong></td>
+                <td>Monthly vague slide decks</td>
+                <td>Ad-hoc Slack messages</td>
+                <td class="col-quantile">Bi-weekly production code releases & live war room</td>
+              </tr>
+              <tr>
+                <td><strong>Accountability Guarantee</strong></td>
+                <td>Billable hours regardless of output</td>
+                <td>Zero recourse if project fails</td>
+                <td class="col-quantile">Milestone precision guarantee</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE PROJECT SCOPER & ESTIMATOR
+         ========================================================================== -->
+    <section id="scoper" class="scoper-section">
+      <div class="container">
+        <div class="section-head reveal-fade-up">
+          <span class="mono-label">INTERACTIVE ENGAGEMENT SCOPER</span>
+          <h2>Configure Your Squad. <br><span class="gradient-text-gold">Instant Scope & Velocity Projection.</span></h2>
+          <p>Select your venture stage, needed disciplines, and target velocity to instantly compute your dedicated squad makeup and investment tier.</p>
+        </div>
+
+        <div class="scoper-container-card reveal-fade-up">
+          
+          <!-- Controls Panel -->
+          <div class="scoper-controls">
+            
+            <!-- Step 1: Stage -->
+            <div>
+              <div class="scoper-group-title">
+                <span>01</span>
+                <span>Select Enterprise Stage</span>
+              </div>
+              <div class="stage-selector-grid">
+                <button class="stage-btn" data-stage="seed">
+                  <div>Starter / Micro</div>
+                  <small style="color:var(--text-muted);">$500 – $1,500 / mo</small>
+                </button>
+                <button class="stage-btn active" data-stage="growth">
+                  <div>Growth Sprint</div>
+                  <small style="color:var(--text-muted);">$1,500 – $3,500 / mo</small>
+                </button>
+                <button class="stage-btn" data-stage="enterprise">
+                  <div>Full Agency Retainer</div>
+                  <small style="color:var(--text-muted);">$3,500 – $7,000 / mo</small>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Capabilities -->
+            <div>
+              <div class="scoper-group-title">
+                <span>02</span>
+                <span>Required Disciplines (Select All Applicable)</span>
+              </div>
+              <div class="capabilities-checkbox-grid">
+                <label class="capability-check-item selected">
+                  <input type="checkbox" class="capability-check" value="High-Ticket Copywriting & Storytelling" checked>
+                  <span class="capability-label">Copywriting & Narrative</span>
+                </label>
+                <label class="capability-check-item selected">
+                  <input type="checkbox" class="capability-check" value="Haute Couture Brand & Packaging" checked>
+                  <span class="capability-label">Luxury Brand & UI/UX</span>
+                </label>
+                <label class="capability-check-item selected">
+                  <input type="checkbox" class="capability-check" value="Omni-Channel Marketing & Paid Ads" checked>
+                  <span class="capability-label">Paid Media & Viral Blitz</span>
+                </label>
+                <label class="capability-check-item">
+                  <input type="checkbox" class="capability-check" value="8K Cinema Video & Media Studio">
+                  <span class="capability-label">8K Film & Video Studio</span>
+                </label>
+                <label class="capability-check-item">
+                  <input type="checkbox" class="capability-check" value="Deep Tech Software & Cloud">
+                  <span class="capability-label">Software, Web & Apps</span>
+                </label>
+                <label class="capability-check-item">
+                  <input type="checkbox" class="capability-check" value="Applied AI & Autonomous Swarms">
+                  <span class="capability-label">Applied AI & Automation</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 3: Speed / Urgency -->
+            <div>
+              <div class="scoper-group-title">
+                <span>03</span>
+                <span>Deployment Velocity</span>
+              </div>
+              <div class="timeline-slider-wrap">
+                <input type="range" id="scoper-speed-slider" class="timeline-range-input" min="1" max="3" step="1" value="2">
+                <div class="timeline-labels-row">
+                  <span>14-Day Red Alert Blitz</span>
+                  <span>4-Week Accelerated Sprint</span>
+                  <span>8-Week Full Build</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Dynamic Output Card -->
+          <div class="scoper-output-panel">
+            <div>
+              <div class="output-header">
+                <div class="output-tier-label">CALCULATED ENGAGEMENT TIER</div>
+                <div id="scoper-tier-name" class="output-tier-name">Growth Velocity Engine</div>
+              </div>
+
+              <div class="scoper-stats-stack">
+                <div class="scoper-stat-line">
+                  <span class="scoper-stat-title">Dedicated Squad Size:</span>
+                  <span id="scoper-squad-size" class="scoper-stat-val">5 Specialists</span>
+                </div>
+                <div class="scoper-stat-line">
+                  <span class="scoper-stat-title">Sprint Cycle:</span>
+                  <span id="scoper-velocity" class="scoper-stat-val">2 Sprints (4-Week Accelerated)</span>
+                </div>
+                <div class="scoper-stat-line">
+                  <span class="scoper-stat-title">Release Cadence:</span>
+                  <span id="scoper-guarantee" class="scoper-stat-val">Bi-Weekly Releases + IP Handover</span>
+                </div>
+                <div class="scoper-stat-line">
+                  <span class="scoper-stat-title">War Room Access:</span>
+                  <span class="scoper-stat-val">Direct Executive Slack / Signal</span>
+                </div>
+              </div>
+
+              <div class="scoper-price-box">
+                <div class="scoper-price-title">Estimated Allocation</div>
+                <div id="scoper-price-display" class="scoper-price-display">$66,000 <small>/ sprint</small></div>
+              </div>
+            </div>
+
+            <button id="scoper-deploy-btn" class="btn btn-primary btn-lg" style="width: 100%;">
+              <span>Deploy This Squad Configuration</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         THE 4-STEP SOVEREIGN PROCESS
+         ========================================================================== -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-head reveal-fade-up">
+          <span class="mono-label">HOW WE ENGAGE</span>
+          <h2>A Protocol Built for Velocity. <br><span class="gradient-text-gold">Zero Friction. Absolute Output.</span></h2>
+          <p>From initial briefing to production deployment in days, not quarters.</p>
+        </div>
+
+        <div class="process-grid stagger-parent">
+          <div class="process-step-card">
+            <div class="process-step-num">01</div>
+            <h3 class="process-step-title">Day 1: Sovereign Audit</h3>
+            <p class="process-step-desc">Deep technical and operational triage. We ingest your vision, define the exact architectural specs, and map quantifiable ROI benchmarks.</p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-num">02</div>
+            <h3 class="process-step-title">Day 2: Squad Deployed</h3>
+            <p class="process-step-desc">A tailored, battle-tested squad of senior directors, engineers, and specialists begins immediate sprint execution in a shared private war room.</p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-num">03</div>
+            <h3 class="process-step-title">Bi-Weekly Sprints</h3>
+            <p class="process-step-desc">Continuous production code, live staging deployments, design system iterations, and weekly executive steering syncs. Zero ambiguity.</p>
+          </div>
+
+          <div class="process-step-card">
+            <div class="process-step-num">04</div>
+            <h3 class="process-step-title">Autonomous Sovereignty</h3>
+            <p class="process-step-desc">Complete knowledge transfer and 100% intellectual property ownership. You receive documented, autonomous infrastructure ready to scale infinitely.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         EXECUTIVE ENDORSEMENTS (TESTIMONIALS)
+         ========================================================================== -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-head reveal-fade-up">
+          <span class="mono-label">EXECUTIVE ENDORSEMENTS</span>
+          <h2>In the Words of Our Partners.</h2>
+          <p>Read unfiltered perspectives from leaders who trust Quantile with their most ambitious initiatives.</p>
+        </div>
+
+        <div class="testimonials-grid stagger-parent">
+          
+          <div class="testimonial-card">
+            <div>
+              <div class="quote-icon">“</div>
+              <p class="quote-text">
+                Quantile isn’t an agency; they are an unfair competitive advantage. They built our autonomous underwriting engine, rebuilt our mobile stack, and helped us raise our Series B in under 4 months. Unprecedented speed.
+              </p>
+            </div>
+            <div class="client-author-box">
+              <div class="client-avatar">MR</div>
+              <div class="client-meta">
+                <span class="client-name">Marcus Ronin</span>
+                <span class="client-title">CEO & Founder, Aether Dynamics</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="quote-icon">“</div>
+              <p class="quote-text">
+                Most agencies give you bloated decks and junior account managers. Quantile deployed ex-Apple designers and ex-DeepMind researchers who solved what three previous agencies couldn't touch. They command the standard.
+              </p>
+            </div>
+            <div class="client-author-box">
+              <div class="client-avatar">EL</div>
+              <div class="client-meta">
+                <span class="client-name">Elena Lindqvist</span>
+                <span class="client-title">Managing Director, Valo Luxury Group</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="quote-icon">“</div>
+              <p class="quote-text">
+                We had a catastrophic operational bottleneck and a high-stakes clinical deadline. The Quantile squad was in our systems in 24 hours and delivered a production solution in 22 days. They are our permanent tactical partners.
+              </p>
+            </div>
+            <div class="client-author-box">
+              <div class="client-avatar">DK</div>
+              <div class="client-meta">
+                <span class="client-name">Dr. David Koenig</span>
+                <span class="client-title">Chief Scientific Officer, Hyperion Bio</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ SECTION (INTELLIGENCE)
+         ========================================================================== -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="section-head reveal-fade-up">
+          <span class="mono-label">EXECUTIVE CLARITY</span>
+          <h2>Frequently Addressed Questions.</h2>
+          <p>Everything you need to know about partnering with Quantile.</p>
+        </div>
+
+        <div class="faq-accordion reveal-fade-up">
+          
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>What can Quantile actually build for our enterprise?</span>
+              <span class="faq-icon-arrow">↓</span>
+            </button>
+            <div class="faq-panel">
+              <p>Literally any technical, design, strategic, or operational asset your enterprise requires. From custom high-frequency trading platforms and autonomous AI agent swarms to luxury rebrands, cinema-grade films, fractional C-Suite leadership, and full ERP overhauls. If an exceptional human mind can engineer it, Quantile executes it.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>How does Quantile maintain world-class quality across so many pillars?</span>
+              <span class="faq-icon-arrow">↓</span>
+            </button>
+            <div class="faq-panel">
+              <p>We do not use generalists. Quantile maintains a curated, sovereign syndicate of top 0.1% specialized leaders—former founders, FAANG technical directors, Cannes-winning creative directors, and Tier-1 venture partners. When you engage Quantile, we assemble the exact elite squad engineered specifically for your mission.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>How quickly can a dedicated Quantile squad be deployed?</span>
+              <span class="faq-icon-arrow">↓</span>
+            </button>
+            <div class="faq-panel">
+              <p>Standard deployments begin within 48 to 72 hours of agreement execution. For emergency turnaround situations or critical launches, our 14-Day Red Alert protocol can deploy a dedicated senior engineering and operational war room in under 24 hours.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>Who owns the intellectual property and code?</span>
+              <span class="faq-icon-arrow">↓</span>
+            </button>
+            <div class="faq-panel">
+              <p>You own 100% of everything, irrevocably. Every line of code, design file, 3D asset, AI model weight, marketing data, and operational workflow belongs exclusively to your company from day one. We never retain lock-in patents or license restrictions.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>How do your pricing and retainer models work?</span>
+              <span class="faq-icon-arrow">↓</span>
+            </button>
+            <div class="faq-panel">
+              <p>We offer transparent, fixed-investment Sprint Cycles (2-week, 4-week, or 8-week sprints) or dedicated Quarterly Sovereign Retainers. You never receive surprise billable-hour invoices. Everything is scoped with crystal clarity and bound to concrete delivery milestones.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger">
+              <span>What is the engagement criteria to work with Quantile?</span>
+              <span class="faq-icon-arrow">↓</span>
+            </button>
+            <div class="faq-panel">
+              <p>We accept a maximum of 4 to 6 concurrent enterprise engagements per quarter to ensure zero dilution of senior attention and absolute perfection of craft. We partner with ambitious, funded startups, mid-market scaling companies, and sovereign enterprises ready for decisive market leadership.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         HIGH-TICKET CALL TO ACTION BANNER
+         ========================================================================== -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card reveal-fade-up">
+          <span class="mono-label" style="margin-bottom: 1.5rem;">INITIATE SOVEREIGN ALLIANCE</span>
+          <h2 class="cta-banner-title">
+            Stop Compromising with Fragmented Agencies. <br>
+            <span class="gradient-text-gold">Build the Future with Quantile.</span>
+          </h2>
+          <p class="cta-banner-sub">
+            Our managing partners review briefs within four hours. Secure your Q4 execution allocation before capacity closes.
+          </p>
+          <div style="display:flex; justify-content:center; gap:1.25rem; flex-wrap:wrap;">
+            <button class="btn btn-primary btn-lg open-modal-trigger">
+              <span>Initiate Executive Briefing</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <a href="#oracle" class="btn btn-secondary btn-lg">
+              <span>Explore The Oracle</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="#" class="brand-wrapper" style="margin-bottom: 1.25rem;">
+            <img src="assets/logo.svg" alt="Quantile" class="brand-logo-img">
+            <span class="brand-name">QUANTILE<span>.</span></span>
+          </a>
+          <p class="footer-brand-bio">
+            Quantile is the sovereign full-spectrum enterprise execution agency. Deep Tech, Applied Artificial Intelligence, Haute Couture Branding, Exponential Growth, and Capital Architecture.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-link-list">
+            <li><a href="#oracle">The Oracle Engine</a></li>
+            <li><a href="#pillars">The 8 Pillars</a></li>
+            <li><a href="#vault">The Case Vault</a></li>
+            <li><a href="#comparison">The Standard</a></li>
+            <li><a href="#scoper">Project Scoper</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Capabilities</div>
+          <ul class="footer-link-list">
+            <li><a href="#pillars">Deep Tech & Rust</a></li>
+            <li><a href="#pillars">Autonomous AI Swarms</a></li>
+            <li><a href="#pillars">Luxury UI/UX Flagships</a></li>
+            <li><a href="#pillars">Fractional C-Suite</a></li>
+            <li><a href="#pillars">Classified Turnaround</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Direct Inquiries</div>
+          <ul class="footer-link-list">
+            <li><a href="#" class="open-modal-trigger">partner@quantile.global</a></li>
+            <li><a href="#" class="open-modal-trigger">Encrypted Signal Available</a></li>
+            <li><span style="color:var(--text-muted);">San Francisco // London // Zurich</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 QUANTILE GLOBAL OPERATIONS INC. ALL RIGHTS RESERVED.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <span>SOVEREIGN ARCHITECTURE</span>
+          <span>STRICT NDA GUARANTEED</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       VIP ENGAGEMENT MODAL (THE INITIATION SUITE)
+       ========================================================================== -->
+  <div id="consultation-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close Modal">✕</button>
+
+      <div class="modal-header">
+        <span class="mono-label">CLASSIFIED & DIRECT INGESTION</span>
+        <h3 class="modal-title">Initiate Quantile Engagement</h3>
+        <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:0.4rem;">
+          Transmit your enterprise requirements. A Managing Partner will review your brief under strict non-disclosure protocol within 4 hours.
+        </p>
+      </div>
+
+      <form id="consultation-form" class="modal-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="client-name">Executive Name *</label>
+            <input type="text" id="client-name" class="form-input" placeholder="e.g. Alexandra Vance" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="client-email">Corporate Email *</label>
+            <input type="email" id="client-email" class="form-input" placeholder="e.g. a.vance@company.com" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="client-company">Company / Organization *</label>
+            <input type="text" id="client-company" class="form-input" placeholder="e.g. Sovereign AI Corp" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="client-budget">Project Investment Tier *</label>
+            <select id="client-budget" class="form-select" required>
+              <option value="$500 - $1,500">$500 - $1,500 (Starter Project / Single Sprint)</option>
+              <option value="$1,500 - $3,500" selected>$1,500 - $3,500 (Growth Acceleration Package)</option>
+              <option value="$3,500 - $7,000">$3,500 - $7,000 (Full-Service Agency Retainer)</option>
+              <option value="$7,000+">$7,000+ (Comprehensive Turnaround & Scale)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="client-brief">Executive Brief / Demands *</label>
+          <textarea id="client-brief" class="form-textarea" placeholder="Describe the mission, technical stack, or strategic outcome you require..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+          <span>Transmit Executive Brief</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+
+        <p style="font-family:var(--font-mono); font-size:0.7rem; color:var(--text-muted); text-align:center;">
+          🔒 256-BIT ENCRYPTION // ZERO DATA LEAKAGE // AUTOMATIC NDA BINDING
+        </p>
+      </form>
+
+      <!-- Success Screen with Tick Mark Animation -->
+      <div id="modal-success-screen" class="modal-success-screen" style="display:none;">
+        <div class="tick-animation-wrapper">
+          <svg class="tick-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="tick-circle" cx="26" cy="26" r="24" fill="none"/>
+            <path class="tick-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+          </svg>
+        </div>
+        <span class="mono-label" style="color:#10B981; margin-bottom:0.4rem;">TRANSMISSION CONFIRMED</span>
+        <h3 class="success-title">We are glad to connect with you ASAP</h3>
+        <p class="success-desc" id="success-client-msg">
+          Your brief has been securely delivered to executive leadership. A Managing Partner will review your requirements under strict non-disclosure protocol and connect with you shortly.
+        </p>
+        <div class="success-badges">
+          <span class="badge-pill active">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Priority Ingestion Confirmed
+          </span>
+          <span class="badge-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            256-Bit Encrypted
+          </span>
+          <span class="badge-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            SLA &lt; 4 Hours
+          </span>
+        </div>
+        <button type="button" class="btn btn-secondary btn-sm" id="modal-success-done" style="margin-top:0.5rem; min-width:140px;">
+          <span>Done</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/canvas.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/interactive.js"></script>
 </body>
 </html>

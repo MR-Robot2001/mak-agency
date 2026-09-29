@@ -1,0 +1,336 @@
+/* ==========================================================================
+   QUANTILE — Micro-Interactions, Shaders & Keyframe Animations
+   ========================================================================== */
+
+/* Shimmer Light Sweeps */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-active {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(240,205,136,0.2) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 3s infinite;
+}
+
+/* Subtle Breathing Glow */
+@keyframes ambientBreathe {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.08);
+  }
+}
+
+.breathe-glow {
+  animation: ambientBreathe 6s ease-in-out infinite;
+}
+
+/* Float Animation */
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.float-elem {
+  animation: subtleFloat 5s ease-in-out infinite;
+}
+
+/* Border Gradient Flow */
+@keyframes borderRotate {
+  0% {
+    border-color: rgba(240, 205, 136, 0.4);
+  }
+  50% {
+    border-color: rgba(56, 189, 248, 0.4);
+  }
+  100% {
+    border-color: rgba(240, 205, 136, 0.4);
+  }
+}
+
+/* Reveal on Scroll Transitions */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-fade-up.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Children Reveal */
+.stagger-parent > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stagger-parent.is-revealed > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+.stagger-parent.is-revealed > *:nth-child(2) { transition-delay: 0.12s; opacity: 1; transform: translateY(0); }
+.stagger-parent.is-revealed > *:nth-child(3) { transition-delay: 0.19s; opacity: 1; transform: translateY(0); }
+.stagger-parent.is-revealed > *:nth-child(4) { transition-delay: 0.26s; opacity: 1; transform: translateY(0); }
+.stagger-parent.is-revealed > *:nth-child(5) { transition-delay: 0.33s; opacity: 1; transform: translateY(0); }
+.stagger-parent.is-revealed > *:nth-child(6) { transition-delay: 0.40s; opacity: 1; transform: translateY(0); }
+.stagger-parent.is-revealed > *:nth-child(7) { transition-delay: 0.47s; opacity: 1; transform: translateY(0); }
+.stagger-parent.is-revealed > *:nth-child(8) { transition-delay: 0.54s; opacity: 1; transform: translateY(0); }
+
+/* Radar Scanning Line */
+@keyframes radarSweep {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.radar-scanner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #F0CD88, #38BDF8, transparent);
+  box-shadow: 0 0 15px #F0CD88;
+  animation: radarSweep 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Luxury Card Spotlight Hover (handled via JS background update) */
+.lux-spotlight {
+  position: relative;
+}
+
+.lux-spotlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(400px circle at var(--mouse-x, -500px) var(--mouse-y, -500px), rgba(240, 205, 136, 0.08), transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.lux-spotlight:hover::after {
+  opacity: 1;
+}
+
+/* Active Audio Waves */
+.sound-toggle-btn.sound-on svg {
+  animation: soundPulse 1.2s infinite ease-in-out;
+}
+
+@keyframes soundPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.18); color: var(--gold-primary); }
+}
+
+/* ==========================================================================
+   GOOGLE SHEET TRANSMISSION & TICK MARK ANIMATIONS
+   ========================================================================== */
+
+/* Button Spinner during transmission */
+@keyframes spinRing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.btn-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-top-color: var(--gold-primary);
+  border-radius: 50%;
+  animation: spinRing 0.75s linear infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Transmitting scanner line on modal */
+.modal-transmitting-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #F0CD88, #10B981, #38BDF8, #F0CD88);
+  background-size: 300% 100%;
+  animation: transmitBarSweep 1.2s linear infinite;
+  z-index: 10;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+@keyframes transmitBarSweep {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+/* Success Screen in Modal */
+.modal-success-screen {
+  text-align: center;
+  padding: 2.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: modalFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Checkmark Badge Wrapper */
+.tick-animation-wrapper {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1.5px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.25), inset 0 0 15px rgba(16, 185, 129, 0.1);
+  animation: tickPulseGlow 2.2s infinite ease-in-out;
+  position: relative;
+}
+
+@keyframes tickPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.25), 0 0 0 0 rgba(16, 185, 129, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(16, 185, 129, 0.45), 0 0 0 14px rgba(16, 185, 129, 0);
+  }
+}
+
+/* SVG Tick Drawing */
+.tick-svg {
+  width: 54px;
+  height: 54px;
+}
+
+.tick-circle {
+  stroke-dasharray: 157;
+  stroke-dashoffset: 157;
+  stroke-width: 2.5;
+  stroke-miterlimit: 10;
+  stroke: #10B981;
+  fill: none;
+  animation: drawCircle 0.65s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+@keyframes drawCircle {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.tick-check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  stroke: #10B981;
+  fill: none;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: drawCheck 0.45s cubic-bezier(0.65, 0, 0.45, 1) 0.45s forwards;
+}
+
+@keyframes drawCheck {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Inline Checkmark for Button */
+.inline-tick-svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  animation: inlineCheckPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes inlineCheckPop {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.25); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.success-title {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.success-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  max-width: 440px;
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+}
+
+.success-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.badge-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.badge-pill.active {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #10B981;
+}
+
