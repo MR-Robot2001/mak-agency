@@ -1,442 +1,271 @@
 /**
- * QUANTILE — Interactive Engines:
- * 1. The "Name It" Oracle Engine
- * 2. Project Scoper & Investment Estimator
- * 3. Case Studies Filter
+ * QUANTILE — High-Converting Interactive Engines:
+ * 1. Interactive Capability Switcher (Copy, Brand, Video, Growth, Dev, AI)
+ * 2. Sticky Conversion Bar & Urgency Controller
+ * 3. Plan & Service Pre-fill Integration
  * 4. FAQ Accordion
- * 5. VIP Brief & Consultation Suite
+ * 5. VIP Brief & Google Sheets Webhook Lead Ingestion Suite
  */
 
 // ==========================================
-// 1. THE "NAME IT" ORACLE ENGINE
+// 1. CAPABILITY SWITCHER PRESETS & CONTROLLER
 // ==========================================
 
-const ORACLE_PRESETS = {
+const CAPABILITY_DATA = {
   copy: {
-    query: "Write a high-converting brand manifesto, sales page, & video script",
-    code: "ORCL-CPY-501",
-    title: "Masterclass Hypnotic Copywriting & Conversion Architecture",
-    tag: "High-Ticket Copywriting & Narrative",
-    squad: "Master Copywriter (ex-Ogilvy/Agora), Direct Response Strategist, Consumer Psychologist",
-    timeline: "2 Sprints (4 Weeks to Master Copy Package)",
-    deliverables: "Comprehensive brand voice doctrine, long-form sales page, high-converting VSL script, 14-part email retention sequence, advertorials",
-    impact: "380% average conversion lift, commanding 5x higher customer lifetime value (LTV)"
-  },
-  content: {
-    query: "Build an 8K commercial video ad campaign & content studio engine",
-    code: "ORCL-MED-808",
-    title: "Cinema Studio Commercials & Viral Social Blitz",
-    tag: "Media Studio & Video Production",
-    squad: "Commercial Film Director, Senior Colorist/Editor, Viral Short-Form Producer, VFX Lead",
-    timeline: "3 Sprints (6 Weeks to Global Premiere)",
-    deliverables: "3x 60s cinema-grade commercials (4K/8K), 60+ modular TikTok/Reels variants, studio podcast setup, media buyer creative pack",
-    impact: "Over 14M+ organic views generated, viral engagement spikes, prestigious cultural footprint"
-  },
-  ai: {
-    query: "Automate our enterprise operations with custom autonomous AI agents",
-    code: "ORCL-AI-902",
-    title: "Autonomous Enterprise Intelligence Matrix",
-    tag: "Applied AI & Neural Architecture",
-    squad: "Lead AI Researcher (ex-DeepMind), LLM Ops Engineer, Enterprise Data SRE",
-    timeline: "3 Sprints (6 Weeks to Full Deployment)",
-    deliverables: "Bespoke multi-agent swarm, private localized RAG pipeline, real-time decision dashboard, automated CRM/ERP syncing",
-    impact: "82% reduction in manual triage, 4.8x velocity increase, zero external data leakage guarantee"
+    badge: "Copywriting & Conversion",
+    badgeClass: "accent-violet",
+    title: "High-Converting Sales Copy & Brand Manifestos",
+    desc: "Hypnotic sales letters, multi-million dollar VSL video scripts, brand manifestos, and high-retention email sequences that turn cold traffic into fanatical buyers.",
+    bullets: [
+      "Long-form direct response sales page or landing page copy",
+      "High-converting VSL script with visual storyboard cues",
+      "7-part automated email welcome & conversion sequence",
+      "Founder brand voice guidelines & persuasive manifesto"
+    ],
+    velocity: "⚡ 48h to First Draft",
+    impact: "📈 +35% Tested Conversion Lift",
+    squad: "👥 Direct-Response Chief + Editor",
+    serviceName: "Masterclass Copywriting",
+    budgetDefault: "$950 (Sprint Starter)"
   },
   brand: {
-    query: "Rebrand our company to command 10x luxury market pricing",
-    code: "ORCL-LUX-441",
-    title: "Sovereign Haute-Couture Identity & Digital Flagship",
-    tag: "Haute Couture Brand & UI/UX",
-    squad: "Executive Creative Director (ex-Apple/Pentagram), 3D Motion Lead, Senior Design Systems Architect",
-    timeline: "4 Sprints (8 Weeks to Global Reveal)",
-    deliverables: "Complete luxury brand design system, bespoke 3D brand assets, award-worthy web flagship, typography & physical packaging guidelines",
-    impact: "340% increase in perceived brand equity, 2.6x pricing power elevation, top 0.1% market positioning"
+    badge: "Haute Branding & Design",
+    badgeClass: "accent-coral",
+    title: "Luxury Brand Identity & Digital Flagships",
+    desc: "Apple-caliber visual systems, bespoke 3D spatial motion, luxury digital interfaces, and packaging guidelines designed to command 10x pricing power.",
+    bullets: [
+      "Comprehensive luxury logo suite & typography system",
+      "Complete Figma UI/UX design tokens & responsive components",
+      "3D spatial product renders & unboxing aesthetics",
+      "Commanding 10x premium perceived brand equity"
+    ],
+    velocity: "⚡ 72h Sprint Delivery",
+    impact: "👑 2x-3x Higher Perceived Value",
+    squad: "👥 Creative Director + 3D Motion Artist",
+    serviceName: "Luxury Brand & UI/UX",
+    budgetDefault: "$2,400 (Growth Accelerator)"
   },
-  fintech: {
-    query: "Build a bespoke high-frequency fintech platform & trading infrastructure",
-    code: "ORCL-FIN-780",
-    title: "Ultra-Low Latency Sovereign Financial Engine",
-    tag: "Deep Tech & Cryptographic Architecture",
-    squad: "Principal Systems Engineer, High-Throughput Cloud Architect, Security & Compliance Lead",
-    timeline: "5 Sprints (10 Weeks to Production Audit)",
-    deliverables: "Sub-millisecond order processing engine, distributed ledger/banking API integrations, military-grade end-to-end encryption",
-    impact: "SOC2/ISO27001 ready, 99.999% uptime SLA, capacity to process 150,000 tx/sec"
+  video: {
+    badge: "8K Cinema & Viral Media",
+    badgeClass: "accent-amber",
+    title: "8K Commercial Cinema & Viral Content Studio",
+    desc: "Commercial films, modular high-converting short-form creative factories for TikTok and Reels, founder podcasts, and cinematic brand storytelling.",
+    bullets: [
+      "3x High-converting commercial ad cuts (4K/8K)",
+      "30+ Modular short-form Reels/TikTok creative variants",
+      "Sound design, kinetic typography & visual effects",
+      "Complete media buyer ready export pack"
+    ],
+    velocity: "⚡ 4-Day Rapid Turnaround",
+    impact: "🎬 280K+ Organic Video Views",
+    squad: "👥 Commercial Film Director + Colorist/Editor",
+    serviceName: "8K Cinema Video Studio",
+    budgetDefault: "$2,400 (Growth Accelerator)"
   },
-  viral: {
-    query: "Execute a viral multi-million dollar product launch campaign",
-    code: "ORCL-MKT-312",
-    title: "Exponential Market Takeover & Global Narrative Launch",
-    tag: "Hyper-Growth & Media Production",
-    squad: "Viral Growth Hacker, Hollywood Cinema Director, Algorithmic Media Strategist",
-    timeline: "2 Sprints (4 Weeks to Zero-Hour Launch)",
-    deliverables: "Cinema-grade launch film, 150+ high-converting creative variants, tier-1 media placements, programmatic influencer syndication",
-    impact: "Projected 10M+ impressions, 28,000+ pre-orders, #1 trending across target verticals"
+  growth: {
+    badge: "Performance & Viral Growth",
+    badgeClass: "accent-cyan",
+    title: "Multi-Channel Paid Ads & Viral Acquisition Blitz",
+    desc: "Algorithmic paid media campaigns across Meta, TikTok, YouTube & Google, programmatic SEO domination, viral PR takeovers, and high-yield CRO funnels.",
+    bullets: [
+      "Multi-channel paid media blitz setup & creative matrix",
+      "High-yield landing page CRO & multivariate testing",
+      "Programmatic SEO architecture for top ranking search terms",
+      "Predictable positive unit economics at scale"
+    ],
+    velocity: "⚡ 48h Campaign Setup",
+    impact: "🚀 3.4x Target Return on Ad Spend",
+    squad: "👥 Performance Media Lead + Growth Architect",
+    serviceName: "Performance & Viral Growth",
+    budgetDefault: "$2,400 (Growth Accelerator)"
   },
-  fractional: {
-    query: "Deploy a fractional C-Suite & secure Series B institutional capital",
-    code: "ORCL-CAP-105",
-    title: "Capital Architecture & Institutional Sovereign Scaling",
-    tag: "Corporate Strategy & Venture Syndicate",
-    squad: "Fractional CFO (ex-Goldman/Blackstone), Fractional CTO, Venture Narrative Architect",
-    timeline: "6 Sprints (12 Weeks to Term Sheet)",
-    deliverables: "Institutional-grade financial model, $50M+ benchmark pitch deck, dataroom construction, direct roadshow introductions",
-    impact: "Closed over $480M+ aggregate funding for Quantile enterprise partners"
+  dev: {
+    badge: "Deep Tech & Software",
+    badgeClass: "accent-indigo",
+    title: "Ultra-Fast Bespoke Web & Mobile Platforms",
+    desc: "Mission-critical full-stack applications, interactive 3D WebGL flagships, native iOS/Android mobile apps, and low-latency cloud backend engineering.",
+    bullets: [
+      "Ultra-fast responsive web flagship (99+ Google Lighthouse score)",
+      "Native iOS & Android mobile application development",
+      "Secure cloud database, authentication & API integrations",
+      "100% clean production code & sovereign IP handover"
+    ],
+    velocity: "⚡ 5-Day Sprint Deployment",
+    impact: "⚡ Sub-Second Load & Clean Architecture",
+    squad: "👥 Senior Full-Stack Engineer + Systems Architect",
+    serviceName: "Deep Tech & Bespoke Dev",
+    budgetDefault: "$2,400 (Growth Accelerator)"
   },
-  mobile: {
-    query: "Build custom iOS/Android mobile apps & cloud backend in 30 days",
-    code: "ORCL-DEV-619",
-    title: "Rapid Tactical Native Mobile & Cloud Ecosystem",
-    tag: "Deep Tech & Software Engineering",
-    squad: "2x Senior Swift/Kotlin Engineers, Full-Stack Cloud Architect, Lead Product Designer",
-    timeline: "2 Sprints (4 Weeks to App Store Submission)",
-    deliverables: "Native iOS & Android apps (Swift/Kotlin/React Native), serverless GraphQL backend, biometric auth, offline caching",
-    impact: "App Store Editor's Choice design standard, 60fps fluid performance, production-ready scale"
+  ai: {
+    badge: "Applied AI & Automation",
+    badgeClass: "accent-emerald",
+    title: "Autonomous Multi-Agent AI & Operations Swarms",
+    desc: "Custom LLM integrations, autonomous AI agents, private localized RAG pipelines, and automated CRM/ERP workflows that eliminate weeks of manual work in seconds.",
+    bullets: [
+      "Custom autonomous multi-agent operational workflows",
+      "Private local RAG knowledge base & semantic search",
+      "Real-time executive decision dashboard & CRM synchronization",
+      "80%+ Operational overhead reduction guaranteed"
+    ],
+    velocity: "⚡ 48h to First Prototype",
+    impact: "🤖 12+ Hours Saved Every Week",
+    squad: "👥 Lead AI Researcher + ML Engineer",
+    serviceName: "Applied AI & Automation",
+    budgetDefault: "$2,400 (Growth Accelerator)"
   }
 };
 
-function initOracle() {
-  const input = document.getElementById('oracle-input');
-  const submitBtn = document.getElementById('oracle-submit-btn');
-  const chips = document.querySelectorAll('.oracle-chip');
-  const codeElem = document.getElementById('blueprint-code');
-  const titleElem = document.getElementById('blueprint-title');
-  const tagElem = document.getElementById('blueprint-tag');
-  const squadElem = document.getElementById('blueprint-squad');
-  const timelineElem = document.getElementById('blueprint-timeline');
-  const delivElem = document.getElementById('blueprint-deliverables');
-  const impactElem = document.getElementById('blueprint-impact');
-  const scopeThisBtn = document.getElementById('oracle-scope-btn');
+function initCapabilitySwitcher() {
+  const tabs = document.querySelectorAll('.switcher-tab-btn');
+  const previewCard = document.querySelector('.switcher-preview-card');
+  const badgeElem = document.getElementById('switcher-badge');
+  const titleElem = document.getElementById('switcher-title');
+  const descElem = document.getElementById('switcher-desc');
+  const bulletsElem = document.getElementById('switcher-bullets');
+  const velocityElem = document.getElementById('switcher-velocity');
+  const impactElem = document.getElementById('switcher-impact');
+  const squadElem = document.getElementById('switcher-squad');
+  const ctaBtn = document.getElementById('switcher-cta-btn');
 
-  if (!input || !submitBtn) return;
+  if (!tabs.length || !previewCard) return;
 
-  function displayBlueprint(data) {
-    const displayCard = document.getElementById('oracle-blueprint');
-    if (displayCard) {
-      displayCard.style.opacity = '0.3';
-      displayCard.style.transform = 'translateY(8px)';
-    }
+  let currentKey = 'copy';
+
+  function renderCapability(key) {
+    const data = CAPABILITY_DATA[key];
+    if (!data) return;
+
+    // Subtle fade transition
+    previewCard.style.opacity = '0.35';
+    previewCard.style.transform = 'translateY(6px)';
 
     setTimeout(() => {
-      if (codeElem) codeElem.textContent = data.code;
-      if (titleElem) titleElem.textContent = data.title;
-      if (tagElem) tagElem.textContent = data.tag;
-      if (squadElem) squadElem.textContent = data.squad;
-      if (timelineElem) timelineElem.textContent = data.timeline;
-      if (delivElem) delivElem.textContent = data.deliverables;
-      if (impactElem) impactElem.textContent = data.impact;
-
-      if (displayCard) {
-        displayCard.style.opacity = '1';
-        displayCard.style.transform = 'translateY(0)';
+      if (badgeElem) {
+        badgeElem.textContent = data.badge;
+        badgeElem.className = `switcher-badge ${data.badgeClass}`;
       }
-    }, 200);
+      if (titleElem) titleElem.textContent = data.title;
+      if (descElem) descElem.textContent = data.desc;
+
+      if (bulletsElem) {
+        bulletsElem.innerHTML = data.bullets.map(b => `
+          <li><span class="switcher-check">✓</span> <span>${b}</span></li>
+        `).join('');
+      }
+
+      if (velocityElem) velocityElem.textContent = data.velocity;
+      if (impactElem) impactElem.textContent = data.impact;
+      if (squadElem) squadElem.textContent = data.squad;
+
+      if (ctaBtn) {
+        ctaBtn.innerHTML = `<span>Book ${data.badge.split(' ')[0]} Sprint →</span>`;
+      }
+
+      previewCard.style.opacity = '1';
+      previewCard.style.transform = 'translateY(0)';
+    }, 150);
   }
 
-  function parseCustomQuery(text) {
-    const q = text.toLowerCase();
-    
-    // Intelligently classify query
-    if (q.includes('copy') || q.includes('write') || q.includes('script') || q.includes('email') || q.includes('story') || q.includes('words') || q.includes('ghostwrit')) {
-      return {
-        code: "ORCL-CPY-" + Math.floor(100 + Math.random() * 900),
-        title: "High-Ticket Copywriting & Conversion Narrative",
-        tag: "Copywriting & Strategic Storytelling",
-        squad: "Direct Response Copy Chief, Senior Narrative Strategist, Conversion Psychologist",
-        timeline: "2 Sprints (4 Weeks)",
-        deliverables: `Persuasive sales narrative tailored to: "${text.slice(0, 45)}...", high-converting landing copy, multi-channel email sequence, brand manifesto`,
-        impact: "Measurable 3x-5x lift in conversions and premium pricing elasticity"
-      };
-    } else if (q.includes('market') || q.includes('ad') || q.includes('growth') || q.includes('traffic') || q.includes('seo') || q.includes('media') || q.includes('video') || q.includes('film') || q.includes('podcast')) {
-      return {
-        code: "ORCL-MKT-" + Math.floor(100 + Math.random() * 900),
-        title: "Omni-Channel Media Takeover & Performance Blitz",
-        tag: "Growth Marketing & Media Studio",
-        squad: "Paid Media Architect, Hollywood Commercial Director, Viral Content Lead",
-        timeline: "3 Sprints (6 Weeks)",
-        deliverables: `Comprehensive media acquisition blitz: "${text.slice(0, 45)}...", high-yield paid ads, cinema-grade creative assets, multi-platform syndicate`,
-        impact: "Guaranteed rapid customer acquisition with positive unit economics at 8-figure scale"
-      };
-    } else if (q.includes('ai') || q.includes('bot') || q.includes('llm') || q.includes('agent') || q.includes('neural') || q.includes('automate')) {
-      return {
-        code: "ORCL-AI-" + Math.floor(100 + Math.random() * 900),
-        title: "Bespoke Neural Synthesis & Autonomous Operations",
-        tag: "Applied AI & Automation",
-        squad: "Lead AI Researcher, Autonomous Agent Architect, Python/Rust SRE",
-        timeline: "2 - 4 Sprints (4 - 8 Weeks)",
-        deliverables: `Tailored automated workflow for: "${text.slice(0, 50)}...", custom agent logic, enterprise-grade vector indexing`,
-        impact: "Guaranteed 60-80% operational overhead reduction & 10x throughput capacity"
-      };
-    } else if (q.includes('brand') || q.includes('design') || q.includes('logo') || q.includes('luxury') || q.includes('ui') || q.includes('web') || q.includes('site')) {
-      return {
-        code: "ORCL-DSGN-" + Math.floor(100 + Math.random() * 900),
-        title: "High-Aesthetic Sovereign Brand & Digital Architecture",
-        tag: "Luxury Brand & Interface Engineering",
-        squad: "Design Director (Awarded), Senior Motion Artist, UI/UX Principal",
-        timeline: "3 Sprints (6 Weeks)",
-        deliverables: `Comprehensive design identity overhaul tailored to: "${text.slice(0, 45)}...", design token system, 3D visual language`,
-        impact: "Instant elevated market positioning, 3x conversion velocity, elite perception"
-      };
-    } else if (q.includes('money') || q.includes('fund') || q.includes('invest') || q.includes('pitch') || q.includes('crypto') || q.includes('fintech') || q.includes('trade')) {
-      return {
-        code: "ORCL-CAP-" + Math.floor(100 + Math.random() * 900),
-        title: "Capital Engineering & High-Throughput Financial Systems",
-        tag: "Venture Architecture & Fintech",
-        squad: "Ex-Wall Street Financial Modeler, Principal Quant Systems Engineer, Legal/Compliance Counsel",
-        timeline: "4 Sprints (8 Weeks)",
-        deliverables: `Institutional financial model, automated liquidity/transaction architecture for: "${text.slice(0, 45)}..."`,
-        impact: "Institutional compliance, rapid deployment, maximum capital efficiency"
-      };
-    } else {
-      return {
-        code: "ORCL-SOV-" + Math.floor(100 + Math.random() * 900),
-        title: "Bespoke Full-Spectrum Enterprise Execution",
-        tag: "Special Operations Squad",
-        squad: "Executive Copy Director, Creative Director, Enterprise Architect, Growth Lead",
-        timeline: "3 - 5 Sprints (Custom Roadmap)",
-        deliverables: `End-to-end execution blueprint addressing: "${text.slice(0, 60)}...", zero-legacy infrastructure, sovereign IP handover`,
-        impact: "Absolute project completion with 99.4% precision guarantee and dedicated 24/7 war room"
-      };
-    }
-  }
-
-  // Handle preset chips
-  chips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      chips.forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      const key = chip.getAttribute('data-oracle');
-      if (ORACLE_PRESETS[key]) {
-        input.value = ORACLE_PRESETS[key].query;
-        displayBlueprint(ORACLE_PRESETS[key]);
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const key = tab.getAttribute('data-cap');
+      if (key && key !== currentKey) {
+        currentKey = key;
+        renderCapability(key);
         if (window.soundEngine) window.soundEngine.playClick();
       }
     });
   });
 
-  // Handle submit query
-  function handleQuery() {
-    const val = input.value.trim();
-    if (!val) return;
-
-    if (window.soundEngine) window.soundEngine.playConfirm();
-
-    // Check if matches preset closely or custom parse
-    let result = null;
-    for (const key in ORACLE_PRESETS) {
-      if (ORACLE_PRESETS[key].query.toLowerCase() === val.toLowerCase()) {
-        result = ORACLE_PRESETS[key];
-        break;
-      }
-    }
-
-    if (!result) {
-      result = parseCustomQuery(val);
-    }
-
-    displayBlueprint(result);
-  }
-
-  submitBtn.addEventListener('click', handleQuery);
-  input.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') handleQuery();
-  });
-
-  // Scope This Project CTA
-  if (scopeThisBtn) {
-    scopeThisBtn.addEventListener('click', () => {
-      const modal = document.getElementById('consultation-modal');
-      const briefInput = document.getElementById('client-brief');
-      if (modal && briefInput) {
-        briefInput.value = `[Oracle Blueprint: ${titleElem ? titleElem.textContent : 'Custom'}]\nDeliverables: ${delivElem ? delivElem.textContent : ''}\nSquad: ${squadElem ? squadElem.textContent : ''}`;
-        openModal();
-      }
-    });
-  }
-}
-
-// ==========================================
-// 2. PROJECT SCOPER & INVESTMENT ESTIMATOR
-// ==========================================
-
-// ==========================================
-// GOOGLE SHEETS WEBHOOK CONFIGURATION
-// ==========================================
-// Live Google Apps Script Web App URL for Quantile Leads
-const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbz6Ll8ocIBxZM_yeWigJpRQgUUS5xhrEXt69HLc7WWgd5uIHX4bdBbIyvEsa1OgwqA/exec";
-
-function initScoper() {
-  const stageBtns = document.querySelectorAll('.stage-btn');
-  const capCheckboxes = document.querySelectorAll('.capability-check');
-  const speedSlider = document.getElementById('scoper-speed-slider');
-  
-  const tierNameElem = document.getElementById('scoper-tier-name');
-  const squadSizeElem = document.getElementById('scoper-squad-size');
-  const velocityElem = document.getElementById('scoper-velocity');
-  const guaranteeElem = document.getElementById('scoper-guarantee');
-  const priceDisplayElem = document.getElementById('scoper-price-display');
-  const deployScopeBtn = document.getElementById('scoper-deploy-btn');
-
-  let currentStage = 'growth'; // seed, growth, enterprise
-  let currentSpeed = 2; // 1 = 14-day, 2 = 4-week, 3 = 8-week
-
-  function calculateScope() {
-    // Count active capabilities
-    let selectedCount = 0;
-    const selectedCaps = [];
-    capCheckboxes.forEach(cb => {
-      if (cb.checked) {
-        selectedCount++;
-        selectedCaps.push(cb.value);
-        cb.closest('.capability-check-item').classList.add('selected');
-      } else {
-        cb.closest('.capability-check-item').classList.remove('selected');
-      }
-    });
-
-    if (selectedCount === 0) selectedCount = 1;
-
-    // Stage baseline calculation (Budget-friendly USD)
-    let basePrice = 2400;
-    let baseSquad = 3;
-    let tierTitle = "Full-Spectrum Growth Engine";
-
-    if (currentStage === 'seed') {
-      basePrice = 950;
-      baseSquad = 2;
-      tierTitle = "Starter / Micro Sprint";
-    } else if (currentStage === 'growth') {
-      basePrice = 2400;
-      baseSquad = 4;
-      tierTitle = "Full-Spectrum Growth Engine";
-    } else if (currentStage === 'enterprise') {
-      basePrice = 4800;
-      baseSquad = 6;
-      tierTitle = "Complete Agency Armada";
-    }
-
-    // Adjust for number of capabilities (budget-friendly $350 per additional discipline)
-    const squadSize = baseSquad + Math.floor(selectedCount * 0.7);
-    let estimatedInvestment = basePrice + (selectedCount - 1) * 350;
-
-    // Adjust for speed
-    let velocityStr = "4 Sprints (8 Weeks)";
-    let guaranteeText = "Full IP Handover + Bi-Weekly Deliveries";
-
-    if (currentSpeed == 1) {
-      // 14-Day Red Alert
-      estimatedInvestment *= 1.25;
-      velocityStr = "14-Day Tactical Blitz";
-      guaranteeText = "Dedicated War Room + Rapid Daily Turnarounds";
-    } else if (currentSpeed == 2) {
-      // 4-Week Sprint
-      estimatedInvestment *= 1.10;
-      velocityStr = "2 Sprints (4-Week Accelerated)";
-      guaranteeText = "Rapid Production-Ready Launch";
-    } else {
-      velocityStr = "4 Sprints (8-Week Full Build)";
-      guaranteeText = "Complete Systems Build & Dedicated Support";
-    }
-
-    const roundedPrice = Math.round(estimatedInvestment / 50) * 50;
-    const formattedPrice = "$" + roundedPrice.toLocaleString();
-
-    // Update UI
-    if (tierNameElem) tierNameElem.textContent = tierTitle;
-    if (squadSizeElem) squadSizeElem.textContent = `${squadSize} Specialists`;
-    if (velocityElem) velocityElem.textContent = velocityStr;
-    if (guaranteeElem) guaranteeElem.textContent = guaranteeText;
-    if (priceDisplayElem) {
-      priceDisplayElem.innerHTML = `${formattedPrice} <small>/ sprint</small>`;
-    }
-
-    return {
-      tierTitle,
-      squadSize,
-      velocityStr,
-      formattedPrice,
-      selectedCaps
-    };
-  }
-
-  // Bind stage buttons
-  stageBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      stageBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentStage = btn.getAttribute('data-stage');
-      if (window.soundEngine) window.soundEngine.playClick();
-      calculateScope();
-    });
-  });
-
-  // Bind checkboxes
-  capCheckboxes.forEach(cb => {
-    cb.addEventListener('change', () => {
-      if (window.soundEngine) window.soundEngine.playClick();
-      calculateScope();
-    });
-  });
-
-  // Bind slider
-  if (speedSlider) {
-    speedSlider.addEventListener('input', (e) => {
-      currentSpeed = parseInt(e.target.value, 10);
-      calculateScope();
-    });
-  }
-
-  // Deploy Scope CTA
-  if (deployScopeBtn) {
-    deployScopeBtn.addEventListener('click', () => {
-      const scopeData = calculateScope();
-      const briefInput = document.getElementById('client-brief');
-      if (briefInput) {
-        briefInput.value = `[Configured Scope: ${scopeData.tierTitle}]\nInvestment: ${scopeData.formattedPrice}/sprint\nTimeline: ${scopeData.velocityStr}\nSquad: ${scopeData.squadSize} Dedicated Specialists\nCapabilities: ${scopeData.selectedCaps.join(', ')}`;
+  // Action button inside preview card
+  if (ctaBtn) {
+    ctaBtn.addEventListener('click', () => {
+      const data = CAPABILITY_DATA[currentKey];
+      if (data) {
+        preselectBudgetAndBrief(data.budgetDefault, `[Interested in: ${data.serviceName} 48h Sprint]`);
       }
       openModal();
     });
   }
-
-  // Initial calculation
-  calculateScope();
 }
 
 // ==========================================
-// 3. CASE STUDIES FILTER (THE VAULT)
+// 2. PLAN & SERVICE PRE-FILL INTEGRATION
 // ==========================================
 
-function initVaultFilters() {
-  const filterBtns = document.querySelectorAll('.vault-filter-btn');
-  const cards = document.querySelectorAll('.vault-card');
+function preselectBudgetAndBrief(budgetValue, briefText) {
+  const budgetSelect = document.getElementById('client-budget');
+  const briefInput = document.getElementById('client-brief');
 
-  if (!filterBtns.length || !cards.length) return;
+  if (budgetSelect && budgetValue) {
+    for (let i = 0; i < budgetSelect.options.length; i++) {
+      if (budgetSelect.options[i].value.includes(budgetValue) || budgetValue.includes(budgetSelect.options[i].value)) {
+        budgetSelect.selectedIndex = i;
+        break;
+      }
+    }
+  }
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const cat = btn.getAttribute('data-filter');
+  if (briefInput && briefText) {
+    if (!briefInput.value.trim() || briefInput.value.startsWith('[Interested in:')) {
+      briefInput.value = briefText + '\n\n';
+    }
+  }
+}
 
-      if (window.soundEngine) window.soundEngine.playClick();
-
-      cards.forEach(card => {
-        const cardCat = card.getAttribute('data-category');
-        if (cat === 'all' || cardCat.includes(cat)) {
-          card.style.display = 'flex';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 50);
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(15px)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 300);
-        }
-      });
+function initPlanSelectors() {
+  // Pricing card buttons
+  const planButtons = document.querySelectorAll('.select-plan-btn');
+  planButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const budget = btn.getAttribute('data-budget');
+      const card = btn.closest('.pricing-card');
+      const planName = card ? card.getAttribute('data-plan') : 'Sprint Plan';
+      preselectBudgetAndBrief(budget, `[Selected Plan: ${planName}]`);
     });
   });
+
+  // Discipline card CTA buttons
+  const serviceButtons = document.querySelectorAll('[data-service]');
+  serviceButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const serviceName = btn.getAttribute('data-service');
+      preselectBudgetAndBrief('$2,400 (Growth Accelerator)', `[Interested in: ${serviceName} 48h Sprint]`);
+    });
+  });
+}
+
+// ==========================================
+// 3. STICKY BOTTOM CONVERSION BAR
+// ==========================================
+
+function initStickyConversionBar() {
+  const stickyBar = document.getElementById('sticky-conversion-bar');
+  const closeBtn = document.getElementById('sticky-bar-close');
+  if (!stickyBar) return;
+
+  let isDismissed = false;
+
+  window.addEventListener('scroll', () => {
+    if (isDismissed) return;
+    const scrollY = window.scrollY || window.pageYOffset;
+    if (scrollY > 380) {
+      stickyBar.classList.add('visible');
+    } else {
+      stickyBar.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      isDismissed = true;
+      stickyBar.classList.remove('visible');
+      if (window.soundEngine) window.soundEngine.playClick();
+    });
+  }
 }
 
 // ==========================================
@@ -457,7 +286,7 @@ function initFAQ() {
 
       if (window.soundEngine) window.soundEngine.playClick();
 
-      // Close all others
+      // Close all other accordion items
       items.forEach(other => {
         other.classList.remove('active');
         const otherPanel = other.querySelector('.faq-panel');
@@ -466,15 +295,17 @@ function initFAQ() {
 
       if (!isActive) {
         item.classList.add('active');
-        panel.style.maxHeight = panel.scrollHeight + 30 + 'px';
+        panel.style.maxHeight = panel.scrollHeight + 35 + 'px';
       }
     });
   });
 }
 
 // ==========================================
-// 5. VIP BRIEF MODAL & CONSULTATION
+// 5. VIP LEAD INGESTION SUITE & WEBHOOK
 // ==========================================
+
+const GOOGLE_SHEET_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbz6Ll8ocIBxZM_yeWigJpRQgUUS5xhrEXt69HLc7WWgd5uIHX4bdBbIyvEsa1OgwqA/exec";
 
 function resetModalView() {
   const form = document.getElementById('consultation-form');
@@ -483,11 +314,10 @@ function resetModalView() {
 
   if (form) {
     form.style.display = 'block';
-    form.reset();
     const submitBtn = form.querySelector('button[type="submit"]');
     if (submitBtn) {
       submitBtn.disabled = false;
-      submitBtn.innerHTML = `<span>Transmit Executive Brief</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>`;
+      submitBtn.innerHTML = `<span>Submit Project Brief</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>`;
     }
   }
 
@@ -587,7 +417,7 @@ function initModal() {
 
       if (window.soundEngine) window.soundEngine.playConfirm();
 
-      // 2. Dispatch to Google Sheets Webhook
+      // 2. Dispatch directly to Google Sheets Webhook
       const formData = new FormData();
       formData.append("timestamp", new Date().toLocaleString());
       formData.append("name", name);
@@ -601,12 +431,12 @@ function initModal() {
         body: formData,
         mode: "no-cors"
       }).then(() => {
-        console.log("✓ Transmitted lead directly to Google Sheets:", GOOGLE_SHEET_WEBHOOK_URL);
+        console.log("✓ Transmitted lead directly to Google Sheets webhook:", GOOGLE_SHEET_WEBHOOK_URL);
       }).catch(err => {
         console.warn("Google Sheet transmission note:", err);
       });
 
-      // 3. On Form Submit: Show Green Tick Mark Animation!
+      // 3. On Form Submit: Reveal Green Checkmark Animation!
       setTimeout(() => {
         // Update submit button with inline animated checkmark
         submitBtn.innerHTML = `
@@ -626,7 +456,7 @@ function initModal() {
           if (existingBar) existingBar.remove();
 
           if (successClientMsg) {
-            successClientMsg.textContent = `Your executive brief for ${company || name} has been securely delivered. A Managing Partner will review your requirements under strict non-disclosure protocol and connect with you ASAP.`;
+            successClientMsg.textContent = `Your project brief for ${company || name} has been securely delivered to executive leadership. A Managing Partner will review your requirements under strict non-disclosure protocol and connect with you ASAP.`;
           }
 
           if (successScreen) {
@@ -634,14 +464,14 @@ function initModal() {
           }
 
           // Show Toast Notice
-          showToast(`✓ Executive brief received for ${company || name}. We are glad to connect with you ASAP!`);
+          showToast(`✓ Brief received for ${company || name}. We are glad to connect with you ASAP!`);
 
-          // Auto-close modal after 4.2 seconds if still open
+          // Auto-close modal after 4.5 seconds if still open
           setTimeout(() => {
             if (modal.classList.contains('open')) {
               closeModal();
             }
-          }, 4200);
+          }, 4500);
         }, 500);
 
       }, 850);
@@ -649,7 +479,7 @@ function initModal() {
   }
 }
 
-// Toast notification helper
+// Global toast notification helper
 function showToast(message) {
   let toast = document.getElementById('global-toast');
   if (!toast) {
@@ -667,11 +497,50 @@ function showToast(message) {
   }, 5000);
 }
 
+// ==========================================
+// 6. NEUMORPHIC DASHBOARD WIDGETS CONTROLLER
+// ==========================================
+
+function initNeumorphicDashboard() {
+  const toggle = document.getElementById('neu-demo-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const knob = toggle.querySelector('.neu-toggle-knob');
+      const isOff = toggle.classList.toggle('off');
+      if (knob) {
+        knob.textContent = isOff ? 'OFF' : 'ON';
+      }
+      if (window.soundEngine) {
+        if (isOff) window.soundEngine.playClick();
+        else window.soundEngine.playConfirm();
+      }
+      showToast(isOff ? 'Sprint Protocol: Paused' : 'Sprint Protocol: Active (48h Velocity)');
+    });
+  }
+
+  // Interactive timeline nodes
+  const timelineNodes = document.querySelectorAll('.neu-timeline-node');
+  timelineNodes.forEach((node, idx) => {
+    node.addEventListener('click', () => {
+      timelineNodes.forEach((n, i) => {
+        if (i <= idx) n.classList.add('active');
+        else n.classList.remove('active');
+      });
+      const activeLine = document.querySelector('.neu-timeline-active-line');
+      if (activeLine) {
+        activeLine.style.width = ((idx + 1) / timelineNodes.length * 90) + '%';
+      }
+      if (window.soundEngine) window.soundEngine.playClick();
+    });
+  });
+}
+
 // Global initialization
 document.addEventListener('DOMContentLoaded', () => {
-  initOracle();
-  initScoper();
-  initVaultFilters();
+  initNeumorphicDashboard();
+  initCapabilitySwitcher();
+  initPlanSelectors();
+  initStickyConversionBar();
   initFAQ();
   initModal();
 });

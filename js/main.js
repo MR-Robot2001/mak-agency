@@ -170,7 +170,7 @@ function initCursor() {
   requestAnimationFrame(renderCursor);
 
   // Hover states for interactive elements
-  const interactives = document.querySelectorAll('a, button, input, select, textarea, .oracle-chip, .stage-btn, .capability-check-item, .vault-card, .pillar-card');
+  const interactives = document.querySelectorAll('a, button, input, select, textarea, .switcher-tab-btn, .disc-card, .work-card, .pricing-card, .card-quantile-way, .faq-trigger');
   interactives.forEach(el => {
     el.addEventListener('mouseenter', () => {
       document.body.classList.add('cursor-hover');
@@ -258,7 +258,7 @@ function initScrollEffects() {
 // ==========================================
 
 function initSpotlights() {
-  const cards = document.querySelectorAll('.pillar-card, .vault-card, .testimonial-card, .oracle-terminal-card, .scoper-container-card');
+  const cards = document.querySelectorAll('.disc-card, .work-card, .pricing-card, .card-quantile-way, .card-old-way, .switcher-preview-card');
 
   cards.forEach(card => {
     card.classList.add('lux-spotlight');

@@ -34,8 +34,8 @@ class AmbientCanvas {
         vx: (Math.random() - 0.5) * 0.45,
         vy: (Math.random() - 0.5) * 0.45,
         radius: Math.random() * 1.8 + 0.8,
-        color: Math.random() > 0.4 ? 'rgba(240, 205, 136, ' : 'rgba(248, 250, 252, ',
-        baseAlpha: Math.random() * 0.4 + 0.2
+        color: Math.random() > 0.5 ? 'rgba(37, 99, 235, ' : 'rgba(148, 163, 184, ',
+        baseAlpha: Math.random() * 0.25 + 0.15
       });
     }
   }
@@ -98,11 +98,11 @@ class AmbientCanvas {
         const lineDist = Math.sqrt(djx * djx + djy * djy);
 
         if (lineDist < this.maxDistance) {
-          const alpha = (1 - lineDist / this.maxDistance) * 0.12;
+          const alpha = (1 - lineDist / this.maxDistance) * 0.18;
           this.ctx.beginPath();
           this.ctx.moveTo(p.x, p.y);
           this.ctx.lineTo(p2.x, p2.y);
-          this.ctx.strokeStyle = `rgba(240, 205, 136, ${alpha})`;
+          this.ctx.strokeStyle = `rgba(37, 99, 235, ${alpha * 0.45})`;
           this.ctx.lineWidth = 0.75;
           this.ctx.stroke();
         }
